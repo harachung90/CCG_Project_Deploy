@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <canvas id="my-canvas"></canvas>
+    <section class="section page-title">
+        <div class="container">
+            <div class="col-sm-12 m-auto course-container">
+                <h2 class="course_title_post">{{ post.title }}</h2>
+                <div class="row date_category_container">
+                    <p class="col-sm-2 course_date_category">{{ post.created_at }}</p>
+                    <p class="col-sm course_date_category">{{ post.category }}</p>
+                </div>
+                <p class="post">{{ post.content | safe }}</p>
+            </div>
+            <button><a href="{% url 'course_app:course' %}">Back</a></button>
+        </div>
+    </section>
+{% endblock %}

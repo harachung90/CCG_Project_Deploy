@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <section class="section page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 m-auto">
+                    <!-- Page Title -->
+                    <h1 class="monserrat">Quiz List</h1>
+                    <!-- Page Description -->
+                    <h4>If this is your first time, start with Level Assessment Quiz.<br>
+                        Once you pass the Level Assessment Quiz, you can move onto Port Scanner Quiz.</h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy section pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="container mx-auto mt-2">
+                        <div class="row d-flex justify-content-around">
+                            {% for quiz in quiz_list %}
+                                <div class="card justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="text-align: center;">{{ quiz.name }}</h5>
+                                        <br>
+                                        <button type="button" id="start-quiz" class="quiz_button"
+                                                data-id="{{ quiz.id }}">Start Quiz
+                                        </button>
+                                    </div>
+                                </div>
+                                </div>
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script-foot %}
+
+    <script>
+        const startQuiz = document.getElementById('start-quiz')
+        const url = window.location.href
+        var id = startQuiz.getAttribute('data-id')
+
+        startQuiz.addEventListener('click', () => {
+            window.location.href = url + id
+        });
+    </script>
+
+{% endblock %}

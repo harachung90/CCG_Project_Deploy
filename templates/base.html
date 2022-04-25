@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Competency Guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Bootstrap App Landing Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="{% static "bootstrap/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
+
+    <!-- CUSTOM CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    {% block script-head %}
+    {% endblock %}
+
+</head>
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+<nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
+    <div class="container">
+        <a class="navbar-brand" href="{% url '' %}"><img src="{% static "assets/logo.png" %}" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item {% if navbar == 'index' %} active {% endif %}">
+                    <a class="nav-link" href="{% url '' %}">Home</a>
+                </li>
+                <li class="nav-item {% if navbar == '' %} active {% endif %}">
+                    <a class="nav-link" href="{% url 'quiz_app:quiz_list' %}">Quiz List</a>
+                </li>
+                <li class="nav-item {% if navbar == 'course' %} active {% endif %}">
+                    <a class="nav-link" href="{% url 'course_app:course' %}">Courses</a>
+                </li>
+                <li class="nav-item {% if navbar == 'congratulations' %} active {% endif %}">
+                    <a class="nav-link" href="{% url 'quiz_app:congratulations' %}">Congratulations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block body %}
+{% endblock %}
+
+<footer>
+    <div class="text-center bg-light py-4">
+        <small class="footer-credit">Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script>
+            . Developed by Hara Chung (Website) & Lara Alghamdi (Quiz and Course Content)</small>
+    </div>
+</footer>
+
+<!-- JAVASCRIPTS -->
+
+
+<script src="{% static 'jquery/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+
+{% block script-foot %}
+{% endblock %}
+</body>
+</html>
+

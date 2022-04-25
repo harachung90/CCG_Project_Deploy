@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <section class="section page-title test">
+        <div class="container">
+            <form id="quiz_form" method="POST">
+                {% csrf_token %}
+                <div id="quiz_box"></div>
+                <input type="submit" class="submit_btn"></input>
+            </form>
+        </div>
+    </section>
+
+    <section id="hidden_box">
+        <hr>
+        <div id="total"></div>
+        <div id="result_box">
+            <div id="message"></div>
+        </div>
+        <div id="start_learning">Check out the Courses to learn!<br>
+            <button class="learning_btn"><a href="{% url 'course_app:course' %}">Start Learning!</a></button>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block script-foot %}
+    <!--<script src="js/script.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/result.js' %}"></script>
+
+{% endblock %}
+</body>

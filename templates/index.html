@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 m-auto">
+                    <!-- Banner Contents -->
+                    <div class="block text-center">
+                        <h1 class="monserrat">Cyber Competency Guide</h1>
+                        <h3>Learn and protect your data.<br>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature section pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ml-auto justify-content-center">
+                    <!-- Feature Mockup -->
+                    <div class="image-content" <!--ata-aos="fade-right"-->
+                    <img class="img-fluid" src="{% static "assets/security.jpg" %}" alt="cyber security">
+                </div>
+            </div>
+            <div class="col-lg-6 mr-auto align-self-center">
+                <div class="feature-content">
+                    <!-- Feature Title -->
+                    <h2>Be safe with </br>Cyber Competency Guide</h2>
+                    <!-- Feature Description -->
+                    <p class="desc">The need for cyber security is increasing with the evolution of information
+                        technology. Now it’s not just a job for cyber security professionals, but for all people who use
+                        the Internet to be aware of its risks, as well as its benefits. Cyber Competency Guide is a
+                        complete suite of cyber security guides for laypeople.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <p>{{ obj.name }}</p>
+{% endblock %}
+
+
