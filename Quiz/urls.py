@@ -10,4 +10,5 @@ urlpatterns = [
     path('quiz_list/<int:myid>/', views.quiz_view, name="quiz"),
     path('quiz_list/<int:myid>/data/', views.quiz_data_view, name='quiz-data'),
     path('quiz_list/<int:myid>/save/', views.save_quiz_view, name='quiz-save'),
+    path('quiz_list/sample', views.quiz_sample, name='quiz_sample'),
 ]

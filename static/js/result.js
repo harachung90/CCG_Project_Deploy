@@ -4,11 +4,33 @@ const quizBox = document.getElementById('quiz_box');
 const resultBox = document.getElementById('result_box');
 const totalScore = document.getElementById('total');
 const message = document.getElementById('message');
+const ticketList = ['6099', '9238', '6772', '1323', '2705', '9985', '9179', '6029', '3983'];
+
+const toPS = url.replace('quiz_list/1', 'quiz_list/2');
+const toCongrats = url.replace('quiz_list/2/', 'congratulations');
 
 $.ajax({
     type: 'GET',
     url: `${url}data/`,
     success: function (response) {
+        if (window.location.href.indexOf("/quiz_list/2") != -1) {
+            var codeInput = prompt("Enter a code that you were offered when you passed the Level Assessment Quiz:");
+
+            String.prototype.includes = function (str) { // PS Quiz
+                return this.indexOf(str) !== -1;
+            }
+
+            if (ticketList.includes(codeInput)) {
+                alert("Good luck with your quiz!");
+            } else if (codeInput === null) {
+                return false;
+            } else {
+                alert("Oh no, that's not the correct code. Try again, please.")
+                return false;
+                //history.back(); // go back to previous page
+            }
+        }
+
         const data = response.data
         data.forEach(ele => {
             for (const [question, answers] of Object.entries(ele)) {
@@ -20,6 +42,7 @@ $.ajax({
                 answers.forEach(answer => {
                     quizBox.innerHTML += `
                         <div>
+                            
                             <input type="radio" class="ans" id="${question}-${answer}" name="${question}" value="${answer}">
                             <label style="cursor: pointer;" for="${question}-${answer}" class="answer">${answer}</label>
                         </div>
@@ -57,8 +80,15 @@ const sendData = () => {
         success: function (response) {
             const marks = response.marks
             totalScore.innerHTML = `<h3>${response.name}, here are your results:</h3>
-                                    <h4 class="num_right">You got ${response.score_num} out of ${response.total} questions right!</h4>
-                                    <h4 class="your_level">You are ${response.user_level}</h4>`
+                                    <h4 class="num_right">You got ${response.score_num} out of ${response.total} questions right!</h4>`
+
+            if (window.location.href.indexOf("/quiz_list/1") != -1) {
+                totalScore.innerHTML += `<h4 class="your_level">You are ${response.user_level}</h4>`
+            } else {
+
+            }
+
+            const user_level = response.user_level;
 
             marks.forEach(res => {
                 const resDiv = document.createElement("div")
@@ -93,7 +123,34 @@ const sendData = () => {
                 } else {
                     message.innerHTML = `<h3>You got these questions wrong:</h3>`
                 }
-            })
+            }) // here!
+
+
+            if (window.location.href.indexOf("/quiz_list/1") != -1) { // Level Assessment Quiz
+                if (user_level === "Advanced") {
+
+                    let randomNum = Math.floor(Math.random() * 9);
+                    let ticketNum = ticketList[randomNum];
+                    const ticketDiv = document.getElementById('ticket');
+                    ticketDiv.innerHTML += `<h2>You passed! Use this code to unlock the Port Scanner Quiz!</br><span style="background-color: #ffd500">${ticketNum}</span></h2>`
+                    const learningDiv = document.getElementById('start_learning');
+                    //learningDiv.style.display = 'none';
+                    // add a link to PS Quiz
+                    learningDiv.innerText = `Click on the button below to go to Port Scanner Quiz right away!`
+                    const learningBtn = document.getElementsByClassName('learning_btn');
+
+                    learningDiv.innerHTML += `</br><button onclick="directPS()">Port Scanner Quiz</button></a>`
+                } else {
+                } // nothing happens
+
+            } else { // Port Scanner Quiz
+                const passed = response.passed;
+                if (passed === true) { // if passed the PS Quiz, redirect to Congratulations page
+                    window.location = toCongrats;
+                } else {
+                    console.log("Study more!");
+                }
+            }
         },
         error: function (error) {
             console.log(error)
@@ -131,7 +188,7 @@ animteScrollTo = function (_selector, _duration, _adjust) {
                 scrollEle.scrollTop = currentY + (unitY * passed);
                 requestAnimationFrame(scrollTo);
             } else {
-                console.log('End off.')
+                //console.log('End off.')
             }
         };
         requestAnimationFrame(scrollTo);
@@ -143,7 +200,7 @@ quizForm.addEventListener('submit', e => {
     e.preventDefault()
     let radios = $('input[type=radio]:checked');
     let total = $('input[type=radio]');
-    // divided by 3 because there are 3 answers to choose from - should chane if the default number of answer choices are changed.
+    // divided by 3 because there are 3 answers to choose from - should change if the default number of answer choices are changed.
     if (radios.length < total.length / 3) {
         alert("Not all the questions are answered.");
         return false;
@@ -158,8 +215,14 @@ function open() {
     const hiddenBox = document.getElementById('hidden_box');
     const startLearning = document.getElementById('start_learning');
     const vheight = $('.test').height();
+
     hiddenBox.style.paddingBottom = vheight - 70 + "px";
     hiddenBox.style.display = 'block';
     startLearning.style.display = 'block';
+
+}
+
+function directPS() {
+    window.location = toPS;
 }
 

@@ -3,12 +3,10 @@
 
 {% block script-head %}
 
-    <script src="{% static 'js/confetti.js' %}"></script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <!-- for EnterName logic -->
-    <script>
+    {% comment %}    <script>
         function getName() {
             const username = localStorage.getItem("savedUserName");
             if (localStorage.savedUserName) {
@@ -17,17 +15,17 @@
                 document.getElementById("name-saved").innerHTML = "No Name Saved";
             }
         }
-    </script>
+    </script>{% endcomment %}
+
 {% endblock %}
 
 {% block body %}
-    <body onload="getName()" class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
-    <canvas id="my-canvas"></canvas>
+
     <section class="section page-title">
         <div class="container">
             <div class="col-sm-12 m-auto congrats">
                 <div class="congrats_message">
-                    <h2>Congratulations, <span id="name-saved"></span>!</h2>
+                    <h2>Congratulations, {{ username }}!</h2>
                     <h2>You passed the test!</h2>
                 </div>
                 <div class="congrats_notice">
@@ -35,7 +33,7 @@
                     <p>Take a screenshot of this page and use it as a certificate!</p>
                     <p>(This page will not be saved.)</p>
                 </div>
-                <button><a href="index.html">Go Back Home</a></button>
+                <button><a href="{% url 'index' %}">Go Back Home</a></button>
             </div>
         </div>
     </section>
@@ -43,24 +41,10 @@
 {% endblock %}
 
 {% block script-foot %}
+    <script src="{% static 'js/confetti.js' %}"></script>
+
     <script>
-
-        // start
-
-        const start = () => {
-            setTimeout(function () {
-                confetti.start()
-            }, 1000); // 1000 is time that after 1 second start the confetti (1000 = 1 sec)
-        };
-
-        //  Stop
-        const stop = () => {
-            setTimeout(function () {
-                confetti.stop()
-            }, 5000); // 5000 is time that after 5 second stop the confetti (5000 = 5 sec)
-        };
-
-        start();
+        startConfetti();
     </script>
-    </body>
+
 {% endblock %}

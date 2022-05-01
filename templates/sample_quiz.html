@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block script-head %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="section page-title sample_quiz">
+        <div class="container">
+            <form id="sample_quiz" method="POST">
+                {% csrf_token %}
+                <div class="mb-2 q_text">
+                    <p class="sample" style="text-align: center;">This is how your questions will look like:</p>
+                    <b>With the IP address given below, what is the CORRECT set of port status?</b>
+                    <b>www.example.com</b>
+                    <div class="sample_answers" style="margin-left: 30px; margin-bottom: 0; font-size: 22px;">
+                        <p class="sample">Choose a correct one among the answers below:</p>
+                        <div>
+                            <input type="radio" class="ans" id="sample_11" name="sample_question">
+                            <label style="cursor: pointer" for="sample_11" class="answer">Port 20: Open, Port 53: Open,
+                                Port 80: Open</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="ans" id="sample_12" name="sample_question">
+                            <label style="cursor: pointer" for="sample_12" class="answer">Port 20: Open, Port 53:
+                                Closed, Port 80: Open</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="ans" id="sample_13" name="sample_question">
+                            <label style="cursor: pointer" for="sample_13" class="answer">Port 20: Closed, Port 53:
+                                Closed, Port 80: Open</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="ans" id="sample_14" name="sample_question">
+                            <label style="cursor: pointer" for="sample_14" class="answer">Port 20: Closed, Port 53:
+                                Open, Port 80: Closed</label>
+                        </div>
+                    </div>
+                    {% comment %}                    <div style="padding: 10px 0px;">
+                        <p class="sample" style="text-align: center; padding-bottom: 10px;">When you're done, hit the
+                            "Submit"
+                            button below to see the result:</p>
+                        <input type="submit" class="submit_btn" id="sample_submit" width="100px"
+                               style="margin: auto; display: block;"></input>
+                    </div>{% endcomment %}
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+

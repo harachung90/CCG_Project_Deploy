@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_summernote',
+    # 'django_summernote',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -119,32 +121,21 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+#
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+#
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
+#
+# SUMMERNOTE_CONFIG = { 'iframe' : True, 'summernote' : { 'airMode': False, 'width' : '100%', 'lang' : 'pt-BR' },
+#                       'disable_attachment': False, }
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
-
-SUMMERNOTE_CONFIG = {
-    'summernote': {
-
-        'fontNames': ['Roboto Light', 'Roboto Regular', 'Roboto Bold', 'Fredoka One', 'Montserrat'],
-        'fontNamesIgnoreCheck': ['Roboto Light', 'Roboto Regular', 'Roboto Bold', 'Fredoka One', 'Montserrat'],
-
-        'toolbar': [
-            ['style', ['style']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-            ['table', ['table']],
-            ['insert', ['link', 'picture', 'hr']],
-            ['view', ['fullscreen', 'codeview']],
-            ['help', ['help']]
-        ],
-
-        'styleTags': ['p', 'h1', 'h2', 'h3', 'small'],
-
-    },
-
-}
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')

@@ -36,6 +36,9 @@ class Question(models.Model):
     def get_answers(self):
         return self.answer_set.all()
 
+    def get_levels(self):
+        return self.level_set.all()
+
 
 class Answer(models.Model):
     content = models.CharField(max_length=200)

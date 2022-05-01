@@ -11,27 +11,15 @@ def index(request):
 
 
 def congratulations(request):
-    return render(request, 'congratulations.html', {'navbar': 'congratulations'})
+    username = request.user.first_name + " " + request.user.last_name
 
+    context = {
+        'navbar': 'congratulations',
+        'username': username,
+    }
 
-# def quiz_list(request):
-#     quizzes = Quiz.objects.all()
-#
-#     context = {
-#         'quizzes': quizzes,
-#     }
-#
-#     return render(request, 'quiz_list.html', context=context)
-#
-# def quiz(request, myid):
-#
-#     quiz = Quiz.objects.get(id=myid)
-#
-#     context = {
-#         'quiz': quiz,
-#     }
-#
-#     return render(request, 'quiz.html', context=context)
+    return render(request, 'congratulations.html', context=context)
+
 
 class QuizListView(ListView):
     model = Quiz
@@ -56,6 +44,7 @@ def quiz_data_view(request, myid):
         for a in q.get_answers():
             answers.append(a.content)
         questions.append({str(q): answers})
+
     return JsonResponse({
         'data': questions,
     })
@@ -123,3 +112,7 @@ def save_quiz_view(request, myid):
     return JsonResponse({'passed': passed, 'score_num': score_num, 'score_percent': score_percent,
                          'total': total, 'marks': marks, 'name': name, 'user_level': user_level,
                          'wrong_num': wrong_num})
+
+
+def quiz_sample(request):
+    return render(request, 'sample_quiz.html')
