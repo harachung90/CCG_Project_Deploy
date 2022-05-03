@@ -26,11 +26,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Custom User
+AUTH_USER_MODEL = 'Account.User'
+
 # Application definition
 
 INSTALLED_APPS = [
     'Quiz',
     'Course',
+    'Account',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
