@@ -7,7 +7,7 @@
             <form id="quiz_form" method="POST">
                 {% csrf_token %}
                 <div id="quiz_box"></div>
-                <input type="submit" class="submit_btn"></input>
+                <input type="submit" class="submit_btn" id="submitBtn"></input>
             </form>
         </div>
     </section>
@@ -19,7 +19,6 @@
             <div id="message"></div>
         </div>
         <div id="ticket">
-
         </div>
         <div id="start_learning">Check out the Courses to learn!<br>
             <button class="learning_btn"><a href="{% url 'course_app:course' %}">Start Learning!</a></button>

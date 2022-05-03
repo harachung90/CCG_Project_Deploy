@@ -112,6 +112,7 @@ const sendData = () => {
                             resDiv.innerHTML += `<br> | You answered: ${answer}`
                         }
                     }
+                    $('#submitBtn').attr("disabled", true);
                 }
                 resultBox.append(resDiv)
 
@@ -212,14 +213,13 @@ quizForm.addEventListener('submit', e => {
 });
 
 function open() {
-    const hiddenBox = document.getElementById('hidden_box');
-    const startLearning = document.getElementById('start_learning');
     const vheight = $('.test').height();
+    const hiddenBox = document.getElementById('hidden_box');
 
     hiddenBox.style.paddingBottom = vheight - 70 + "px";
-    hiddenBox.style.display = 'block';
-    startLearning.style.display = 'block';
 
+    $('#hidden_box').css('display', 'block');
+    $('#start_learning').css('display', 'block');
 }
 
 function directPS() {
