@@ -11,7 +11,7 @@ class RegistrationForm(UserCreationForm):
         cleaned_data = super(RegistrationForm, self).clean()
         first_name = cleaned_data.get('first_name')
         last_name = cleaned_data.get('last_name')
-        msg = 'first_name', 'Special symbols such as @, +, /, ! and numbers are not allowed in a name. Please use only alphabets and/or . and -.'
+        msg = 'Special symbols such as @, +, /, ! and numbers are not allowed in a name. Please use only alphabets and/or . and -.'
         regex = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                  '0', '"']
         for i in regex:

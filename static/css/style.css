@@ -1447,3 +1447,26 @@ hr {
     margin: auto;
 }
 
+#register_form {
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 900px;
+}
+
+/*
+
+#register_form input {
+    float: right;
+    width: 30%;
+    position: absolute;
+}
+
+#register_form label {
+    width: 20%;
+}
+
+#register_form small {
+    display: block;
+    position: relative;
+    left: 175px;
+}*/
