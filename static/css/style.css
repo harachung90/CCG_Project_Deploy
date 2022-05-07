@@ -273,6 +273,7 @@ label input {
 .q_text {
     text-align: left;
     font-size: 2rem;
+    padding-top: 20px;
 }
 
 .difficulty_level {
@@ -431,6 +432,10 @@ button:hover, .submit_btn:hover {
     z-index: 1;
 }
 
+.navbar-nav {
+    display: contents !important;
+}
+
 .main-nav .navbar-brand {
     padding: 10px;
 }
@@ -438,9 +443,13 @@ button:hover, .submit_btn:hover {
 .main-nav .navbar-nav .nav-item {
     position: relative;
     font-family: "Fredokae", sans-serif;
+    width: max-content;
+    width: -moz-max-content;
 }
 
 .main-nav .navbar-nav .nav-item .nav-link {
+    width: max-content;
+    width: -moz-max-content;
     position: relative;
     text-align: center;
     font-size: 30px;
@@ -1453,20 +1462,12 @@ hr {
     width: 900px;
 }
 
-/*
-
-#register_form input {
-    float: right;
-    width: 30%;
-    position: absolute;
+#login_form {
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 500px;
 }
 
-#register_form label {
-    width: 20%;
+.errorlist.nonfield li {
+    color: red;
 }
-
-#register_form small {
-    display: block;
-    position: relative;
-    left: 175px;
-}*/

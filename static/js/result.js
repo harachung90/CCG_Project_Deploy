@@ -202,7 +202,7 @@ quizForm.addEventListener('submit', e => {
     let radios = $('input[type=radio]:checked');
     let total = $('input[type=radio]');
     // divided by 3 because there are 3 answers to choose from - should change if the default number of answer choices are changed.
-    if (radios.length < total.length / 3) {
+    if (radios.length < total.length / 4) {
         alert("Not all the questions are answered.");
         return false;
     } else {
