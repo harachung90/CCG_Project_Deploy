@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django_summernote',
+    'django_summernote',
     'ckeditor',
     'ckeditor_uploader',
 ]
@@ -125,14 +125,17 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-#
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-#
-# X_FRAME_OPTIONS = 'SAMEORIGIN'
-#
-# SUMMERNOTE_CONFIG = { 'iframe' : True, 'summernote' : { 'airMode': False, 'width' : '100%', 'lang' : 'pt-BR' },
-#                       'disable_attachment': False, }
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+SUMMERNOTE_CONFIG = {'iframe': True, 'summernote': {'airMode': False, 'width': '100%', 'lang': 'en'},
+                     'disable_attachment': False,
+                     'fontNames': ['Roboto Light', 'Roboto Regular', 'Roboto Bold'],
+                     'fontNamesIgnoreCheck': ['Roboto Light', 'Roboto Regular', 'Roboto Bold'],
+                     }
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"

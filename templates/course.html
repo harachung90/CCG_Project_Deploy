@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% block script-head %}
+    <style>
+        body {
+            font-family: "Fredoka"
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
     {% for post in post_list %}
         <section class="section page-title" style="padding: 50px 0;">

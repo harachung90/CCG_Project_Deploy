@@ -8,4 +8,5 @@ urlpatterns = [
     path('', include('Quiz.urls', namespace='quiz_app')),
     path('', include('Course.urls', namespace='course_app')),
     path('', include('Account.urls', namespace='account_app')),
+    path('summernote/', include('django_summernote.urls')),
 ]
