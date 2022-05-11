@@ -53,7 +53,11 @@ def login_view(request):
 
             if user:
                 login(request, user)
-                return redirect('index')
+
+                if 'next' in request.POST:
+                    return redirect(request.POST.get('next'))
+                else:
+                    return redirect('index')
 
     else:
         form = UserAuthenticationForm()

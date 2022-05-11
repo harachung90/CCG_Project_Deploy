@@ -19,6 +19,12 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
+    <!-- hamburger menu -->
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
     {% block script-head %}
     {% endblock %}
 
@@ -31,6 +37,11 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="ti-menu"></span>
+            <div class="ham_container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -56,12 +67,15 @@
                 <li class="nav-item {% if navbar == 'index' %} active {% endif %}">
                     <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
-                <li class="nav-item {% if navbar == '' %} active {% endif %}">
+                <li class="nav-item {% if navbar == 'quiz_list' %} active {% endif %}">
                     <a class="nav-link" href="{% url 'quiz_app:quiz_list' %}">Quiz List</a>
                 </li>
-                <li class="nav-item {% if navbar == 'course' %} active {% endif %}">
+
+                <!-- maybe get rid of this link too -->
+                {% comment %}                <li class="nav-item {% if navbar == 'courses' %} active {% endif %}">
                     <a class="nav-link" href="{% url 'course_app:course' %}">Courses</a>
-                </li>
+                </li>{% endcomment %}
+
                 <!-- get rid of this link later -->
                 {% comment %}                <li class="nav-item {% if navbar == 'congratulations' %} active {% endif %}">
                     <a class="nav-link" href="{% url 'quiz_app:congratulations' %}">Congratulations</a>

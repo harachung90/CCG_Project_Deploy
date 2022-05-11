@@ -3,6 +3,8 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.views.generic import ListView
 from .models import Quiz, Question, Answer, Mark
+from django.contrib.auth.decorators import login_required
+from Account.urls import login_view
 
 
 # Create your views here.
@@ -10,6 +12,7 @@ def index(request):
     return render(request, 'index.html', {'navbar': 'index'})
 
 
+@login_required
 def congratulations(request):
     username = request.user.first_name + " " + request.user.last_name
 
@@ -25,12 +28,22 @@ class QuizListView(ListView):
     model = Quiz
     template_name = 'quiz_list.html'
 
+    def get_queryset(self):
+        return Quiz.objects.all()
 
+    def get_context_data(self, **kwargs):
+        context = super(QuizListView, self).get_context_data(**kwargs)
+        context['navbar'] = 'quiz_list'
+        return context
+
+
+@login_required
 def quiz_view(request, myid):
     quiz = Quiz.objects.get(id=myid)
 
     context = {
         'quiz': quiz,
+        'navbar': 'quiz_list',
     }
 
     return render(request, 'quiz.html', context=context)
