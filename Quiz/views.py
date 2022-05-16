@@ -64,7 +64,8 @@ def quiz_data_view(request, myid):
 
 
 def save_quiz_view(request, myid):
-    if request.is_ajax():
+    # if request.is_ajax():
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
         questions = []
         data = request.POST
         data_ = dict(data.lists())
@@ -122,9 +123,9 @@ def save_quiz_view(request, myid):
 
         Mark.objects.create(quiz=quiz, user=user, score=score_percent, user_level=user_level)
 
-    return JsonResponse({'passed': passed, 'score_num': score_num, 'score_percent': score_percent,
-                         'total': total, 'marks': marks, 'name': name, 'user_level': user_level,
-                         'wrong_num': wrong_num})
+        return JsonResponse({'passed': passed, 'score_num': score_num, 'score_percent': score_percent,
+                             'total': total, 'marks': marks, 'name': name, 'user_level': user_level,
+                             'wrong_num': wrong_num})
 
 
 def quiz_sample(request):
