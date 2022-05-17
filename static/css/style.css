@@ -8,6 +8,9 @@ body {
     font-family: "Fredoka", sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: #b9d6f2;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -626,7 +629,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    margin-top: auto;
 }
 
 .footer-main {
