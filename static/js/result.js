@@ -80,7 +80,7 @@ const sendData = () => {
         success: function (response) {
             const marks = response.marks
             totalScore.innerHTML = `<h3>${response.name}, here are your results:</h3>
-                                    <h4 class="num_right">You got ${response.score_num} out of ${response.total} questions right!</h4>`
+                                    <h2 class="num_right">You got ${response.score_num} out of ${response.total} questions right!</h2>`
 
             if (window.location.href.indexOf("/quiz_list/1") != -1) {
                 totalScore.innerHTML += `<h4 class="your_level">You are ${response.user_level}</h4>`
