@@ -779,10 +779,10 @@ footer {
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 1200px) {
   iframe {
-    width: 900px;
-    height: 450px;
+    width: 854px;
+    height: 480px;
   }
 }
 
