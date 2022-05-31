@@ -9,8 +9,13 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: #b9d6f2;
     min-height: 400px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     clear: both;
+}
+@media (max-width: 412px) {
+    body {
+        margin-bottom: 200px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
