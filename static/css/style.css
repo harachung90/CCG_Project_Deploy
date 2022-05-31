@@ -11,6 +11,8 @@ body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
+    height: 100%;
+    overflow: hidden;
 }
 
 @media (max-width: 800px) {
