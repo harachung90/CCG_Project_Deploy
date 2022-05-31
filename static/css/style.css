@@ -12,7 +12,7 @@ body {
     margin-bottom: 100px;
     clear: both;
 }
-@media (max-width: 412px) {
+@media (max-width: 800px) {
     body {
         margin-bottom: 200px;
     }
