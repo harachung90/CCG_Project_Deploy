@@ -1494,7 +1494,7 @@ hr {
 #register_form {
     padding-top: 20px;
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
 }
 
 #login_form {
