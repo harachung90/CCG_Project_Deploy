@@ -216,7 +216,7 @@ function open() {
     const vheight = $('.test').height();
     const hiddenBox = document.getElementById('hidden_box');
 
-    hiddenBox.style.paddingBottom = vheight - 70 + "px";
+    //hiddenBox.style.paddingBottom = vheight - 70 + "px";
 
     $('#hidden_box').css('display', 'block');
     $('#start_learning').css('display', 'block');
