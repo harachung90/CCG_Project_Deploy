@@ -11,7 +11,6 @@ body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
-    word-wrap: break-word;
 }
 
 @media (max-width: 800px) {
