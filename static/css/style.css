@@ -1506,7 +1506,7 @@ hr {
 #login_form {
     padding-top: 20px;
     margin: 0 auto;
-    width: 500px;
+    max-width: 500px;
 }
 
 .errorlist.nonfield li {
