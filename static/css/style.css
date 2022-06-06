@@ -1540,10 +1540,10 @@ hr {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
-.tooltip-inner {
-    font-family: "Fredoka", sans-serif;
-    font-size: 22px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+.tooltip {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 22px !important;
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black !important;
 }
