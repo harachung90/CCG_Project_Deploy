@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='quiz',
             name='description',
-            field=models.CharField(default='This is a test quiz.', max_length=99999999),
+            field=models.TextField(default='This is a test quiz.'),
         ),
     ]
