@@ -114,18 +114,4 @@ How do I turn SmartScreen off?
 {% endblock %}
 
 {% block script-foot %}
-    <script>
-        $('#my_modal').on('show.bs.modal', function (e) {
-            var id = $(e.relatedTarget).data('id');
-            var that = $(this);
-            $(this).find('button[id="check"]').click(function () {
-                var txt = that.find('input[id="txt"]').val();
-                if (txt === '6666') {
-                    alert('Good luck with your quiz!');
-                } else {
-                    alert("Oh no, that's not the correct code...");
-                }
-            });
-        });
-    </script>
 {% endblock %}

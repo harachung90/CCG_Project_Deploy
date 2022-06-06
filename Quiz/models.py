@@ -15,6 +15,7 @@ class Quiz(models.Model):
     name = models.CharField(max_length=50)
     num_of_questions = models.IntegerField(default=1)
     score_to_pass = models.IntegerField(help_text="Required score in %", default=67)
+    description = models.CharField(default="This is a test quiz.")
 
     def __str__(self):
         return f'{self.name}'
