@@ -1539,11 +1539,3 @@ hr {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-
-.tooltip {
-    font-family: "Fredoka", sans-serif !important;
-    font-size: 22px !important;
-    background-color: white !important;
-    color: black !important;
-    border: 2px solid black !important;
-}
