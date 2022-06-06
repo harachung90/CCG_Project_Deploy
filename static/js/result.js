@@ -142,15 +142,18 @@ const sendData = () => {
 
                     learningDiv.innerHTML += `</br><button onclick="directPS()">Port Scanner Quiz</button></a>`
                 } else {
+
                 } // nothing happens
 
-            } else { // Port Scanner Quiz
+            } else if (window.location.href.indexOf("/quiz_list/2") != -1) { // Port Scanner Quiz
                 const passed = response.passed;
                 if (passed === true) { // if passed the PS Quiz, redirect to Congratulations page
                     window.location = toCongrats;
                 } else {
-                    console.log("Study more!");
+                    // nothing happens
                 }
+            } else {
+                // nothing happens
             }
         },
         error: function (error) {
