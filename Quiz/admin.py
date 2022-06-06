@@ -1,13 +1,22 @@
+from django_summernote.admin import SummernoteModelAdmin
 from django.contrib import admin
 from .models import Quiz, Question, Answer, Mark
+
+
+# class AnswerInLine(admin.TabularInline):
+#     model = Answer
+#
+#
+# class QuestionAdmin(admin.ModelAdmin):
+#     inlines = [AnswerInLine]
 
 
 class AnswerInLine(admin.TabularInline):
     model = Answer
 
 
-class QuestionAdmin(admin.ModelAdmin):
-    inlines = [AnswerInLine]
+class QuestionAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
 
 
 admin.site.register(Quiz)
