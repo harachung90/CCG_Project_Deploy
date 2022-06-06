@@ -3,6 +3,11 @@
 
 {% block script-head %}
     <script src="{% static 'js/quiz_load.js' %}" defer></script>
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 {% endblock %}
 
 {% block body %}
