@@ -4,10 +4,10 @@
 {% block script-head %}
     <script src="{% static 'js/quiz_load.js' %}" defer></script>
     <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 {% endblock %}
 
 {% block body %}
@@ -19,8 +19,7 @@
                     <h1 class="monserrat">Quiz List</h1>
                     <!-- Page Description -->
                     <h3 id="desc0">Click on each quiz button above to see the description and try the quiz!</h3>
-                    <h4>(You should be logged in to take a test. You may be required to log in and then redirected to
-                        the test after a successful login.)</h4>
+                    <h4>(You should be logged in to take a test. You may be required to log in and then redirected to the test after a succsssful login.)</h4>
 
                 </div>
             </div>
@@ -35,27 +34,82 @@
                         <div class="row d-flex justify-content-center">
                             {% for quiz in quiz_list %}
                                 <div class="justify-content-center">
-                                <button class="quiz_desc_button" data-id="{{ quiz.id }}">{{ quiz.name }}</button>
+                                    <button class="quiz_desc_button" data-id="{{ quiz.id }}">{{ quiz.name }}</button>
                                 </div>
                             {% endfor %}
-
+                        </div>
+                        <div id="quiz_desc_box">
+                            <div id="desc1">
                                 <div class="container">
                                     <div class="col-sm-12 m-auto demo-container">
-                                        {% for quiz in quiz_list %}
-                                        <div class="quiz_desc_box">
-                                            <h2>{{ quiz.name }}</h2>
-                                            <p>{{ quiz.description }}</p>
-                                            <button id="start-quiz" style="align-items: center">Take the Quiz!</button>
-                                        </div>
-                                        {% endfor %}
+                                        <h2>Level Assessment Quiz</h2>
+                                        <p>If this is your first time, start with Level Assessment Quiz.<br>
+                                            You can gauge your knowledge on cyber security.<br>
+                                            You will be asked 18 questions in total.<br>
+                                            Don't forget to check if you have answered all the questions!<br>
+                                            If you haven't, you won't be able to submit your answers.<br>
+                                            Also, after submitting, you won't be able to change your answers.<br>
+                                            Once you pass the Level Assessment Quiz, you can move onto Port Scanner
+                                            Quiz.</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div id="desc2">
+                                <div class="container">
+                                    <div class="col-sm-12 m-auto demo-container">
+                                        <h2>Port Scanner Quiz</h2>
+                                        <p>This port scanner quiz is designed to test your knowledge on port scanning.
+                                            Port scanning is basically checking to see if a port is open for communication.
+                                            If it's open, then it can be taken advantage of to find vulnerabilities in the system.</p>
+                                        <p>Download the port scanner below: (Last updated: 06/06/2022)<br>
+                                        (Hover over the download button for help if you can't download.)</p>
+                                         <button type="button" data-toggle="tooltip" data-placement="bottom" title=
+                                                 "If you're using IE or Edge and the browser says 'FILE is not commonly downloaded and could harm your computer', turn off SmartScreen setting and try again.
+You may have to click on the download button again and choose 'Keep' to download the file.
 
+How do I turn SmartScreen off?
+1. Select Settings and more > Settings > Privacy, search, and services.
+2. Under Services, turn Microsoft Defender SmartScreen off.
+(You can turn it back on after downloading if you wish.)
+">
+                                             <a href="https://dl.dropboxusercontent.com/s/jf37qce330kpiqq/Port_Scanner_Project.exe?dl=0" download>Download</a></button>
+                                        <p>The demo video below will help you get through the installation steps and
+                                            teach
+                                            you how to use it, and why it's important!</p>
+                                        <figure>
+                                            <div class="videoWrapper">
+                                                    <iframe
+                                                    src="https://www.youtube.com/embed/sdpxddDzXfE"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen></iframe>
+                                            </div>
+                                        </figure>
+                                        <p>Be sure to have the port scanner ready before the Port Scanner Quiz, as you
+                                            will
+                                            be required to run it for the quiz. Don't worry, the quiz will pop up in a
+                                            new
+                                            window, and you can still refer to the demo video at the same time!</p>
+                                        <p>To see how the quiz will look like, click <span class="sample"><a
+                                                href="{% url 'quiz_app:quiz_sample' %}">here</a></span>. It'll be very
+                                            similar to Level
+                                            Assessment Quiz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="desc3">
+                                <div class="container">
+                                    <div class="col-sm-12 m-auto demo-container">
+                                        <h2>{{ quiz.name }}</h2>
+                                        <p>This is a test quiz.</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <button id="start-quiz" style="align-items: center">Take the Quiz!</button>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 {% endblock %}
 
