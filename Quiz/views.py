@@ -30,7 +30,7 @@ class QuizListView(ListView):
     ordering = ['id']
 
     def get_queryset(self):
-        return Quiz.objects.all()
+        return Quiz.objects.all().order_by('id')
 
     def get_context_data(self, **kwargs):
         context = super(QuizListView, self).get_context_data(**kwargs)
