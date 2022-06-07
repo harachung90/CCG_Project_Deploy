@@ -1480,7 +1480,7 @@ hr {
     margin: 20px;
     border: solid 3px #00509d;
     text-align: center;
-    display: none;
+    /*display: none;*/
     padding: 20px;
 }
 
