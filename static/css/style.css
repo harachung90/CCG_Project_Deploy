@@ -1485,16 +1485,21 @@ hr {
 }
 
 .quiz_desc_box {
+    background-color: white;
+    margin: 20px;
+    border: solid 3px #00509d;
+    text-align: center;
+    padding: 20px;
     display: none;
 }
 
-/*#desc1 {
+#desc1 {
     display: none;
 }
 
 #desc2 {
     display: none;
-}*/
+}
 
 #start-quiz {
     /*display: none;*/
