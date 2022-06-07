@@ -1467,6 +1467,15 @@ hr {
     margin-bottom: 15px;
 }
 
+.quiz_desc_box_active {
+    background-color: white;
+    margin: 20px;
+    border: solid 3px #00509d;
+    text-align: center;
+    padding: 20px;
+    display: block;
+}
+
 .quiz_desc_button {
     width: auto;
     box-sizing: border-box;
@@ -1475,13 +1484,8 @@ hr {
     margin-right: 25px;
 }
 
-#quiz_desc_box {
-    background-color: white;
-    margin: 20px;
-    border: solid 3px #00509d;
-    text-align: center;
-    /*display: none;*/
-    padding: 20px;
+.quiz_desc_box {
+    display: none;
 }
 
 /*#desc1 {
