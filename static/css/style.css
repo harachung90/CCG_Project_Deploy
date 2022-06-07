@@ -1483,7 +1483,7 @@ hr {
     margin-right: 25px;
 }
 
-.quiz_desc_box {
+#quiz_desc_box {
     background-color: white;
     margin: 20px;
     border: solid 3px #00509d;
