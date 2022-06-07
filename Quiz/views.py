@@ -25,7 +25,7 @@ def congratulations(request):
 
 
 class QuizListView(ListView):
-    queryset = Quiz.objects.order_by('created_at')
+    queryset = Quiz.objects.order_by('id')
     model = Quiz
     template_name = 'quiz_list.html'
 
