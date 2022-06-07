@@ -29,7 +29,8 @@ class QuizListView(ListView):
     template_name = 'quiz_list.html'
 
     def get_queryset(self):
-        return Quiz.objects.all()
+        # return Quiz.objects.all()
+        return Quiz.objects.order_by('-pk')
 
     def get_context_data(self, **kwargs):
         context = super(QuizListView, self).get_context_data(**kwargs)
