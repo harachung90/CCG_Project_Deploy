@@ -27,10 +27,10 @@ def congratulations(request):
 class QuizListView(ListView):
     model = Quiz
     template_name = 'quiz_list.html'
+    ordering = ['id']
 
     def get_queryset(self):
-        # return Quiz.objects.all()
-        return Quiz.objects.order_by('-pk')
+        return Quiz.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super(QuizListView, self).get_context_data(**kwargs)
