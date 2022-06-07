@@ -1458,7 +1458,6 @@ hr {
     margin-top: 10px;
 }
 
-
 #start_quiz {
     display: none;
     width: 220px;
@@ -1502,7 +1501,7 @@ hr {
 }
 
 #start-quiz {
-    /*display: none;*/
+    display: none;
     margin: auto;
 }
 
