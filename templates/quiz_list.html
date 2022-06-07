@@ -37,17 +37,17 @@ $(document).ready(function(){
                                     <button class="quiz_desc_button" data-id="{{ quiz.id }}">{{ quiz.name }}</button>
                                 </div>
                             {% endfor %}
+                            {% for quiz in quiz_list %}
                                 <div id="quiz_desc_box">
                                     <div class="container">
-                                        {% for quiz in quiz_list %}
                                         <div class="col-sm-12 m-auto demo-container">
                                             <h2>{{ quiz.name }}</h2>
                                             <p>{{ quiz.description }}</p>
-                                        {% endfor %}
                                         </div>
                                     </div>
                                 <button id="start-quiz" style="align-items: center">Take the Quiz!</button>
                                 </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
