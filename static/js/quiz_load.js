@@ -12,10 +12,10 @@ $('.quiz_desc_list').click(function(){
     // var button_id = $('.quiz_desc_button').attr('data-id')
     var desc_show = $(this).find('.quiz_desc_box');
     $(desc_show).show();
-    $(desc_show).siblings().hide();
+    $('.quiz_desc_box').not($(desc_show)).hide();
     // var button_id = $(this).attr('data-id');
     // var quiz_desc = document.querySelectorAll('[data-id="button_id"]')[1]
-    
+
     // $(".demo-container").not(quiz_desc).hide()
     console.log("Does this work?")
 
