@@ -8,10 +8,13 @@ const desc2 = document.getElementById('desc2')
 const desc3 = document.getElementById('desc3')
 
 
-$('.quiz_desc_button').click(function(){
+$('.quiz_desc_list').click(function(){
     // var button_id = $('.quiz_desc_button').attr('data-id')
-    var button_id = $(this).attr('data-id')
-    var quiz_desc = document.querySelectorAll('[data-id="button-id"]')[1]
+    var desc_show = $(this).find('.quiz_desc_box');
+    $(desc_show).show();
+    
+    // var button_id = $(this).attr('data-id');
+    // var quiz_desc = document.querySelectorAll('[data-id="button_id"]')[1]
 
     $(quiz_desc).show()
     // $(".demo-container").not(quiz_desc).hide()
