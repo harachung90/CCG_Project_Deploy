@@ -10,19 +10,25 @@ const desc3 = document.getElementById('desc3')
 
 $('.quiz_desc_button').click(function(){
     var button_id = $('.quiz_desc_button').attr('data-id')
-    var quiz_desc = document.querySelectorAll('[data-id="button-id"]');
+    var quiz_desc = document.querySelectorAll('[data-id="button-id"]')[1];
+
+    $(quiz_desc).show();
+    $("div").not(quiz_desc).hide();
+
 
     if ($(quiz_desc).hasClass('quiz_desc_box_active')){
     $(quiz_desc).removeClass('quiz_desc_box_active');
     $('.quiz_desc_box_active').show();
-    $("div").not('.quiz_desc_box_active').hide();
+    $("li").not('.quiz_desc_box_active').hide();
+
     } else {
     $(quiz_desc).addClass('quiz_desc_box_active');
     $('.quiz_desc_box_active').hide();
-    $("div").not('.quiz_desc_box_active').hide();
+    $("li").not('.quiz_desc_box_active').hide();
     }
 });
 
+/*
 function open1() {
     descBox.style.display = 'block';
     desc1.style.display = 'block';
@@ -65,5 +71,6 @@ function open3(){
 idButton[0].addEventListener('click', open1);
 idButton[1].addEventListener('click', open2);
 idButton[2].addEventListener('click', open3);
+*/
 
 

@@ -1466,6 +1466,9 @@ hr {
     margin-bottom: 15px;
 }
 
+.quiz_desc_box li {
+    list-style: none;
+}
 .quiz_desc_box_active {
     background-color: white;
     margin: 20px;
