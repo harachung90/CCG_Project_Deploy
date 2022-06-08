@@ -1469,7 +1469,7 @@ hr {
 .quiz_desc_box li {
     list-style: none;
 }
-.quiz_desc_box_active {
+.quiz_desc_box {
     background-color: white;
     margin: 20px;
     border: solid 3px #00509d;
@@ -1499,7 +1499,7 @@ hr {
 }
 
 #start-quiz {
-    display: none;
+    /*display: none;*/
     margin: auto;
 }
 

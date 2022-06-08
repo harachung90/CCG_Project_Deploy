@@ -16,19 +16,6 @@ $('.quiz_desc_list').click(function(){
     // var button_id = $(this).attr('data-id');
     // var quiz_desc = document.querySelectorAll('[data-id="button_id"]')[1]
 
-    // $(".demo-container").not(quiz_desc).hide()
-    console.log("Does this work?")
-
-    if ($(quiz_desc).hasClass('quiz_desc_box_active')){
-    $(quiz_desc).removeClass('quiz_desc_box_active')
-    $('.quiz_desc_box_active').show()
-    // $("li").not('.quiz_desc_box_active').hide()
-
-    } else {
-    $(quiz_desc).addClass('quiz_desc_box_active')
-    /*$('.quiz_desc_box_active').hide()
-    $(".demo-container").not('.quiz_desc_box_active').hide()*/
-    }
 });
 
 /*
