@@ -9,12 +9,11 @@ const desc3 = document.getElementById('desc3')
 
 
 $('.quiz_desc_list').click(function(){
-    // var button_id = $('.quiz_desc_button').data("id")
-    for (var i = 0; i<$('.quiz_desc_list').length; i++) {
-     var desc_show = $('div').find('.quiz_desc_box').querySelector('[data-id="i"]')[1]
-     $(desc_show).show();
-     $('.quiz_desc_box').not($(desc_show)).hide();
-    }
+    var button_id = $('.quiz_desc_button').data("id")
+    var desc_to_show = $("div").find(`[data-id='${button_id}']`)[1]
+
+    $(desc_to_show).show();
+    $('.quiz_desc_box').not($(desc_to_show)).hide();
     // var desc_show = $(this).siblings().children().find('.quiz_desc_box').querySelector('');
     // $(desc_show).show();
     // $('.quiz_desc_box').not($(desc_show)).hide();
