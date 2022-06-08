@@ -15,6 +15,7 @@ $('.quiz_desc_button').click(function(){
 
     $(quiz_desc).show()
     $("div").not(quiz_desc).hide()
+    console.log("Does this work?")
 
     if ($(quiz_desc).hasClass('quiz_desc_box_active')){
     $(quiz_desc).removeClass('quiz_desc_box_active')
