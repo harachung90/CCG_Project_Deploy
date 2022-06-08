@@ -37,20 +37,23 @@
                                 <div class="justify-content-center quiz_desc_list">
                                     <button class="quiz_desc_button" data-id="{{ quiz.id }}">{{ quiz.name }}</button>
                                 </div>
-                                    <div class="quiz_desc_box" data-id="{{ quiz.id }}">
-                                        <h2>{{ quiz.name }}</h2>
-                                        <p>{{ quiz.description }}</p>
-                                        <button id="start-quiz" data-id="{{ quiz.id }}" style="align-items: center">Take
-                                            the Quiz!
-                                        </button>
+                                <div class="container">
+                                    <div class="col-sm-12 m-auto demo-container">
+                                        <div class="quiz_desc_box" data-id="{{ quiz.id }}">
+                                            <h2>{{ quiz.name }}</h2>
+                                            <p>{{ quiz.description }}</p>
+                                            <button id="start-quiz" data-id="{{ quiz.id }}" style="align-items: center">
+                                                Take
+                                                the Quiz!
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            {% endfor %}
-
-                        </div>
+                                {% endfor %}
                     </div>
                 </div>
             </div>
+        </div>
 
         </div>
         </div>

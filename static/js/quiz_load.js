@@ -10,7 +10,7 @@ const desc3 = document.getElementById('desc3')
 
 $('.quiz_desc_list').click(function(){
     // var button_id = $('.quiz_desc_button').attr('data-id')
-    var desc_show = $(this).find('.quiz_desc_box');
+    var desc_show = $(this).parents().siblings().find('.quiz_desc_box');
     $(desc_show).show();
     $('.quiz_desc_box').not($(desc_show)).hide();
     // var button_id = $(this).attr('data-id');
