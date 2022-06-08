@@ -7,6 +7,13 @@ const desc1 = document.getElementById('desc1')
 const desc2 = document.getElementById('desc2')
 const desc3 = document.getElementById('desc3')
 
+
+$('.quiz_desc_button').click(function(){
+    var button_id = $('.quiz_desc_button').getAttribute('data-id')
+    $("div[data-id=button_id]").addClass('quiz_desc_box_active');
+    $("div").not('.quiz_desc_box_active').hide();
+});
+
 function open1() {
     descBox.style.display = 'block';
     desc1.style.display = 'block';
