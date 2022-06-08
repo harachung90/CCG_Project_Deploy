@@ -10,14 +10,14 @@ const desc3 = document.getElementById('desc3')
 
 $('.quiz_desc_button').click(function(){
     var button_id = $('.quiz_desc_button').attr('data-id')
-    var quiz_desc = $(".quiz_desc_box div[data-id='button_id']")
+    var quiz_desc = document.querySelectorAll('[data-id="button-id"]');
 
     if ($(quiz_desc).hasClass('quiz_desc_box_active')){
-    $("div[data-id=button_id]").removeClass('quiz_desc_box_active');
+    $(quiz_desc).removeClass('quiz_desc_box_active');
     $('.quiz_desc_box_active').show();
     $("div").not('.quiz_desc_box_active').hide();
     } else {
-    $("div[data-id=button_id]").addClass('quiz_desc_box_active');
+    $(quiz_desc).addClass('quiz_desc_box_active');
     $('.quiz_desc_box_active').hide();
     $("div").not('.quiz_desc_box_active').hide();
     }
