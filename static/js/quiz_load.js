@@ -8,7 +8,7 @@ const desc2 = document.getElementById('desc2')
 const desc3 = document.getElementById('desc3')
 
 
-$('.quiz_desc_button').click(function(){
+$('.quiz_desc_button').click(function(event){
     // var button_id = $(this).data("id")
 
     var clickedIndex = $(this).index();
