@@ -14,7 +14,7 @@ $('.quiz_desc_button').click(function(){
     var quiz_desc = document.querySelectorAll('[data-id="button-id"]')[1]
 
     $(quiz_desc).show()
-    $("div").not(quiz_desc).hide()
+    $(".demo-container").not(quiz_desc).hide()
     console.log("Does this work?")
 
     if ($(quiz_desc).hasClass('quiz_desc_box_active')){
