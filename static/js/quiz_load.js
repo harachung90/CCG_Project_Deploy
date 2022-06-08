@@ -8,9 +8,12 @@ const desc2 = document.getElementById('desc2')
 const desc3 = document.getElementById('desc3')
 
 
-$('.quiz_desc_list').click(function(){
-    var button_id = $('.quiz_desc_button').data("id")
-    var desc_to_show = $("div").find(`[data-id='${button_id}']`)[1]
+$('.quiz_desc_button').click(function(){
+    var button_id = $(this).data("id")
+
+    var clickedIndex = $('.quiz_desc_button').index($(this));
+
+    var desc_to_show = $("div").find(`[data-id='${clickedIndex}']`)[1]
 
     $(desc_to_show).show();
     $('.quiz_desc_box').not($(desc_to_show)).hide();
