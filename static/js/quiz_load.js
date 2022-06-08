@@ -9,9 +9,10 @@ const desc3 = document.getElementById('desc3')
 
 
 $('.quiz_desc_button').click(function(){
-    var button_id = $(this).data("id")
+    // var button_id = $(this).data("id")
 
-    var clickedIndex = $('.quiz_desc_button').index($(this));
+    var clickedIndex = $(this).index();
+    console.log(i);
 
     var desc_to_show = $("div").find(`[data-id='${clickedIndex}']`)[1]
 
