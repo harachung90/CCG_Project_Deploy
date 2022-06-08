@@ -33,23 +33,25 @@
                 <div class="col-lg-12">
                     <div class="container mx-auto mt-2">
                         <div class="row d-flex justify-content-center">
-                            {% for quiz in quiz_list %}
+
                                 <div class="justify-content-center quiz_desc_list">
+                                    {% for quiz in quiz_list %}
                                     <button class="quiz_desc_button" data-id="{{ quiz.id }}">{{ quiz.name }}</button>
+                                    {% endfor %}
                                 </div>
                                 <div class="container">
                                     <div class="col-sm-12 m-auto demo-container">
+                                        {% for quiz in quiz_list %}
                                         <div class="quiz_desc_box" data-id="{{ quiz.id }}">
                                             <h2>{{ quiz.name }}</h2>
                                             <p>{{ quiz.description }}</p>
                                             <button id="start-quiz" data-id="{{ quiz.id }}" style="align-items: center">
-                                                Take
-                                                the Quiz!
+                                                Take the Quiz!
                                             </button>
                                         </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
-                                {% endfor %}
                     </div>
                 </div>
             </div>
