@@ -12,7 +12,7 @@ $('.quiz_desc_button').click(function(event) {
         // var button_id = $(this).data("id")
 
         var clickedIndex = $(this).index();
-        console.log(clickedIndex);
+        console.log("clicked Index: " + clickedIndex);
 
         $('.quiz_desc_box').hide();
         $('.quiz_desc_box').eq(clickedIndex).show();
@@ -20,12 +20,11 @@ $('.quiz_desc_button').click(function(event) {
         var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
         console.log("quiz id: " + id);
 
-        // const id = idButton[1].getAttribute('data-id')
-
-        startQuiz.addEventListener('click', () => {
-            window.location.href = url + id;
+        startQuiz.click(function(event) {
+        window.location.href = url + id;
         })
     });
+
 
 /*
 function open1() {
