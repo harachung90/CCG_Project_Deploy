@@ -346,10 +346,6 @@ button:hover, .submit_btn:hover {
     background-color: #fff;
 }
 
-.demo-container button {
-    width: 160px;
-}
-
 @media (max-width: 340px) {
     .q_text {
         text-align: center;
@@ -1409,7 +1405,7 @@ hr {
 }
 
 .demo-container button {
-    width: 130px;
+    width: 160px;
     margin-bottom: 20px;
 }
 
