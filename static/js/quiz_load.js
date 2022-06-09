@@ -21,6 +21,7 @@ $('.quiz_desc_button').click(function(event) {
         console.log("quiz id: " + id);
 
         $('.start_quiz').click(function() {
+                console.log("Clicked!");
                 window.location.href = url + id;
         })
     });
