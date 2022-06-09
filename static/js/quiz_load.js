@@ -7,8 +7,7 @@ const url = window.location.href
 // const desc2 = document.getElementById('desc2')
 // const desc3 = document.getElementById('desc3')
 
-$(document).ready(function () {
-    $('.quiz_desc_button').click(function (event) {
+$('.quiz_desc_button').click(function (event) {
         // var button_id = $(this).data("id")
 
         var clickedIndex = $(this).index();
@@ -20,15 +19,12 @@ $(document).ready(function () {
         var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
         console.log("quiz id: " + id);
 
-        var chosen = $('.start_quiz').eq(clickedIndex)
-        
-        $(chosen).on("click", function () {
+        $('.start_quiz').eq(clickedIndex).click(()=> {
             console.log("Clicked!");
             window.location.href = url + id;
         })
-
     }
-});
+);
 
 
 /*
