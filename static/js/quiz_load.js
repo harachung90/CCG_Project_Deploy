@@ -9,23 +9,15 @@ const desc3 = document.getElementById('desc3')
 
 
 $('.quiz_desc_button').click(function(event){
-    // var button_id = $(this).data("id")
+    var button_id = $(this).data("id")
 
     var clickedIndex = $(this).index();
-    console.log(clickedIndex);
     $('.quiz_desc_box').hide();
     $('.quiz_desc_box').eq(clickedIndex).show();
 
-
-    // var desc_to_show = $("div").find(`[data-id='${clickedIndex}']`)[1]
-    //
-    // $(desc_to_show).show();
-    // $('.quiz_desc_box').not($(desc_to_show)).hide();
-    // var desc_show = $(this).siblings().children().find('.quiz_desc_box').querySelector('');
-    // $(desc_show).show();
-    // $('.quiz_desc_box').not($(desc_show)).hide();
-    // var button_id = $(this).attr('data-id');
-    // var quiz_desc = document.querySelectorAll('[data-id="button_id"]')[1]
+    startQuiz.addEventListener('click', () => {
+        window.location.href = url + button_id;
+]
 
 });
 
