@@ -1498,7 +1498,7 @@ hr {
     display: none;
 }
 
-#start-quiz {
+.start-quiz {
     /*display: none;*/
     margin: auto;
 }

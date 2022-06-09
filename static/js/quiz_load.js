@@ -1,4 +1,4 @@
-const startQuiz = document.getElementById('start-quiz')
+const startQuiz = document.getElementsByClassName('start-quiz')
 const descBox = document.getElementById('quiz_desc_box')
 const idButton = document.getElementsByClassName('quiz_desc_button')
 const url = window.location.href
