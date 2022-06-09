@@ -1,11 +1,11 @@
 // const startQuiz = document.getElementsByClassName('start-quiz')
-const descBox = document.getElementById('quiz_desc_box')
-const idButton = document.getElementsByClassName('quiz_desc_button')
+// const descBox = document.getElementById('quiz_desc_box')
+// const idButton = document.getElementsByClassName('quiz_desc_button')
 const url = window.location.href
 
-const desc1 = document.getElementById('desc1')
-const desc2 = document.getElementById('desc2')
-const desc3 = document.getElementById('desc3')
+// const desc1 = document.getElementById('desc1')
+// const desc2 = document.getElementById('desc2')
+// const desc3 = document.getElementById('desc3')
 
 
 $('.quiz_desc_button').click(function(event) {
@@ -20,9 +20,8 @@ $('.quiz_desc_button').click(function(event) {
         var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
         console.log("quiz id: " + id);
 
-        var startQuiz = $('.start_quiz');
-        $(startQuiz).click(function() {
-        window.location.href = url + id;
+        $('.start_quiz').click(function() {
+                window.location.href = url + id;
         })
     });
 
