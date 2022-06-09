@@ -8,24 +8,24 @@ const desc2 = document.getElementById('desc2')
 const desc3 = document.getElementById('desc3')
 
 
-$('.quiz_desc_button').click(function(event){
-    // var button_id = $(this).data("id")
+$('.quiz_desc_button').click(function(event) {
+        // var button_id = $(this).data("id")
 
-    var clickedIndex = $(this).index();
-    console.log(clickedIndex);
+        var clickedIndex = $(this).index();
+        console.log(clickedIndex);
 
-    $('.quiz_desc_box').hide();
-    $('.quiz_desc_box').eq(clickedIndex).show();
+        $('.quiz_desc_box').hide();
+        $('.quiz_desc_box').eq(clickedIndex).show();
 
-    var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
-    console.log("quiz id: " + id);
+        var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
+        console.log("quiz id: " + id);
 
-    // const id = idButton[1].getAttribute('data-id')
+        // const id = idButton[1].getAttribute('data-id')
 
-    startQuiz.addEventListener('click', () => {
-        window.location.href = url + id;
-})
-);
+        startQuiz.addEventListener('click', () => {
+            window.location.href = url + id;
+        })
+    });
 
 /*
 function open1() {
