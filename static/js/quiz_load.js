@@ -20,7 +20,7 @@ $('.quiz_desc_button').click(function(event) {
         var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
         console.log("quiz id: " + id);
 
-        startQuiz.click(function(event) {
+        startQuiz.click(function() {
         window.location.href = url + id;
         })
     });
