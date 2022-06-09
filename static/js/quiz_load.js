@@ -27,7 +27,7 @@ $(document).ready(function () {
             console.log("Clicked!");
             window.location.href = url + quiz_id;
         })
-    }
+    
 
     $('.start-quiz').eq(1).on("click", function () {
         alert("Hello!");
