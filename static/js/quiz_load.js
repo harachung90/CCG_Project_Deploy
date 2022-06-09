@@ -19,6 +19,12 @@ $(document).ready(function () {
             var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
             console.log("quiz id: " + id);
 
+            for (var i = 0; i < $('.quiz_desc_box').length; i++) {
+                $('.start-quiz').eq(1).on("click", function () {
+                    console.log("Clicked!");
+                    window.location.href = url + id;
+                }
+            }
             $('.start-quiz').eq(1).on("click", function () {
                 alert("Hello!");
             })
