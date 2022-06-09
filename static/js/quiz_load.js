@@ -23,8 +23,9 @@ $(document).ready(function () {
                 $('.start-quiz').eq(1).on("click", function () {
                     console.log("Clicked!");
                     window.location.href = url + id;
-                }
+                })
             }
+
             $('.start-quiz').eq(1).on("click", function () {
                 alert("Hello!");
             })
