@@ -17,9 +17,8 @@ $('.quiz_desc_button').click(function(event){
 
     startQuiz.addEventListener('click', () => {
         window.location.href = url + button_id;
-]
-
-});
+}
+);
 
 /*
 function open1() {
