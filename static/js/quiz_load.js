@@ -13,6 +13,9 @@ $('.quiz_desc_button').click(function(event){
 
     var clickedIndex = $(this).index();
     console.log(clickedIndex);
+    $('.quiz_desc_box').hide();
+    $('.quiz_desc_box').eq(clickedIndex).show();
+
 
     // var desc_to_show = $("div").find(`[data-id='${clickedIndex}']`)[1]
     //
