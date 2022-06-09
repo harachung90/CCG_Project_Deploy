@@ -1458,7 +1458,7 @@ hr {
     margin-top: 10px;
 }
 
-#start_quiz {
+.start_quiz {
     display: none;
     width: 220px;
     color: #ffffff;
