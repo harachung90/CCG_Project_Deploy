@@ -20,12 +20,11 @@ $('.quiz_desc_button').click(function (event) {
     var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
     console.log("quiz id: " + id);
 
-});
-$(document).ready(function () {
-        $('.start_quiz').click(function () {
+    $('#start_quiz').on('click', function () {
         console.log("Clicked!");
         window.location.href = url + id;
     })
+
 });
 
 
