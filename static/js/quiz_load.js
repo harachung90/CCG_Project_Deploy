@@ -1,4 +1,4 @@
-const startQuiz = document.getElementsByClassName('start-quiz')
+// const startQuiz = document.getElementsByClassName('start-quiz')
 const descBox = document.getElementById('quiz_desc_box')
 const idButton = document.getElementsByClassName('quiz_desc_button')
 const url = window.location.href
@@ -20,7 +20,8 @@ $('.quiz_desc_button').click(function(event) {
         var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
         console.log("quiz id: " + id);
 
-        startQuiz.click(function() {
+        var startQuiz = $('.start_quiz');
+        $(startQuiz).click(function() {
         window.location.href = url + id;
         })
     });
