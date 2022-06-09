@@ -7,36 +7,40 @@ const url = window.location.href
 // const desc2 = document.getElementById('desc2')
 // const desc3 = document.getElementById('desc3')
 $(document).ready(function () {
-        $('.quiz_desc_button').click(function (event) {
-            // var button_id = $(this).data("id")
+    $('.quiz_desc_button').click(function (event) {
+        // var button_id = $(this).data("id")
 
-            var clickedIndex = $(this).index();
-            console.log("clicked Index: " + clickedIndex);
+        var clickedIndex = $(this).index();
+        var quiz_id = $(this).data("id");
 
-            $('.quiz_desc_box').hide();
-            $('.quiz_desc_box').eq(clickedIndex).show();
+        console.log("clicked Index: " + clickedIndex);
+        console.log("data id" + quiz_id);
 
-            var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
-            console.log("quiz id: " + id);
+        $('.quiz_desc_box').hide();
+        $('.quiz_desc_box').eq(clickedIndex).show();
 
-            for (var i = 0; i < $('.quiz_desc_box').length; i++) {
-                $('.start-quiz').eq(i).on("click", function () {
-                    console.log("Clicked!");
-                    window.location.href = url + id;
-                })
-            }
+        var id = $('.quiz_desc_box').eq(clickedIndex).data("id");
+        console.log("quiz id: " + id);
 
-            $('.start-quiz').eq(1).on("click", function () {
-                alert("Hello!");
-            })
-
-            $('.start_quiz').eq(clickedIndex).click(() => {
-                console.log("Clicked!");
-                window.location.href = url + id;
-            })
+        $('.start-quiz').on("click", function () {
+        //$('.start-quiz').eq(clickedIndex).on("click", function () {
+            console.log("Clicked!");
+            window.location.href = url + quiz_id;
         })
     }
-);
+
+    $('.start-quiz').eq(1).on("click", function () {
+        alert("Hello!");
+    })
+
+    $('.start_quiz').eq(clickedIndex).click(() => {
+        console.log("Clicked!");
+        window.location.href = url + id;
+    })
+})
+}
+)
+;
 
 
 /*
