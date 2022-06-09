@@ -26,7 +26,7 @@ $(document).ready(function () {
         console.log("Clicked!");
         window.location.href = url + id;
     })
-}
+});
 
 
 /*
