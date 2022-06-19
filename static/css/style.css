@@ -1554,10 +1554,6 @@ hr {
   text-align: left;
 }
 
-.faq-list-item h3 {
-  font-size: 14px;
-}
-
 .faq-list-item span {
   position:absolute;
   top:0;
@@ -1567,7 +1563,6 @@ hr {
 }
 
 .answer {
-  font-size: 12px;
   display: none;
   padding: 5px 0px;
   margin-bottom: 15px;
