@@ -1545,3 +1545,30 @@ hr {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+.faq-list-item {
+  margin:10px;
+  border-bottom:1px solid #ccc;
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+}
+
+.faq-list-item h3 {
+  font-size: 14px;
+}
+
+.faq-list-item span {
+  position:absolute;
+  top:0;
+  right:5px;
+  color:#ccc;
+  font-size:13px;
+}
+
+.answer {
+  font-size: 12px;
+  display: none;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+}
