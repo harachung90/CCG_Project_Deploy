@@ -57,7 +57,7 @@ class Mark(models.Model):
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     score = models.FloatField(default=0)
-    user_level = models.CharField(choices=LEVEL, max_length=25, default="")
+    user_level = models.CharField(choices=LEVEL, max_length=25, default="Beginner")
 
     def __str__(self):
         return str(self.quiz)

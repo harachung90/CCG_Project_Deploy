@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
             model_name='mark',
             name='user_level',
             field=models.CharField(choices=[('Beginner', 'Beginner'), ('Intermediate', 'Intermediate'), ('Advanced', 'Advanced')], default='', max_length=25),
-            
+
         ),
     ]
