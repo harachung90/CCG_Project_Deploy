@@ -1546,6 +1546,10 @@ hr {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+#faq-list {
+    padding-left: 0px;
+}
+
 .faq-list-item {
   margin:10px;
   border-bottom:1px solid #ccc;
