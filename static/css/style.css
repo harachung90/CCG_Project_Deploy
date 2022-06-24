@@ -1571,3 +1571,11 @@ hr {
   padding: 5px 0px;
   margin-bottom: 15px;
 }
+
+.question {
+    font-weight: 500;
+}
+
+.faq-list-item p {
+    font-weight: 300;
+}
