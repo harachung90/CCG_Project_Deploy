@@ -164,7 +164,7 @@
     "fields": {
       "num": 13,
       "total": 18,
-      "content": "13. Which of the subsequent is an example of physical layer vulnerability",
+      "content": "13. Which of the subsequent is an example of physical layer vulnerability?",
       "level": "Advanced",
       "quiz": 1
     }
@@ -208,7 +208,7 @@
     "fields": {
       "num": 17,
       "total": 18,
-      "content": "17. The complete type of OSI is OSI model is vital __________",
+      "content": "17. The complete type of OSI is OSI model is vital __________.",
       "level": "Advanced",
       "quiz": 1
     }
