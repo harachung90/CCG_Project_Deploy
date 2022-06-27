@@ -115,7 +115,7 @@ def save_quiz_view(request, myid):
         if score_percent >= int(2 / 3 * 100):
             user_level = "Advanced"
             passed = True
-        elif score_percent > int(1 / 3 * 100) & score_percent < int(2 / 3 * 100):
+        elif score_percent >= int(1 / 3 * 100) & score_percent < int(2 / 3 * 100):
             user_level = "Intermediate"
             passed = False
         else:
