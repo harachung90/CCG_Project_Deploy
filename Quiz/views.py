@@ -112,15 +112,15 @@ def save_quiz_view(request, myid):
         name = user.first_name + " " + user.last_name
         user_level = ""
 
-        if score_percent >= int(2 / 3 * 100):
-            user_level = "Advanced"
-            passed = True
+        if score_percent < int(1 / 3 * 100):
+            user_level = "Beginner"
+            passed = False
         elif score_percent >= int(1 / 3 * 100) & score_percent < int(2 / 3 * 100):
             user_level = "Intermediate"
             passed = False
         else:
-            user_level = "Beginner"
-            passed = False
+            user_level = "Advanced"
+            passed = True
 
         Mark.objects.create(quiz=quiz, user=user, score=score_percent, user_level=user_level)
 
