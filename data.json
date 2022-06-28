@@ -18,15 +18,6 @@
     }
   },
   {
-    "model": "Quiz.quiz",
-    "pk": 3,
-    "fields": {
-      "name": "Test",
-      "num_of_questions": 3,
-      "score_to_pass": 67
-    }
-  },
-  {
     "model": "Quiz.question",
     "pk": 1,
     "fields": {
