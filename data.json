@@ -23,7 +23,7 @@
     "fields": {
       "num": 1,
       "total": 18,
-      "content": "1. Define Cybersecurity.",
+      "content": "1. Define Cybersecurity",
       "level": "Beginner",
       "quiz": 1
     }
@@ -56,7 +56,7 @@
     "fields": {
       "num": 4,
       "total": 18,
-      "content": "4. Which of the subsequent is an objective of network security?",
+      "content": "4. Which of the subsequent is an objective of network security",
       "level": "Beginner",
       "quiz": 1
     }
@@ -195,18 +195,18 @@
   },
   {
     "model": "Quiz.question",
-    "pk": 17,
+    "pk": 18,
     "fields": {
       "num": 17,
       "total": 18,
-      "content": "17. The complete type of OSI model is vital __________.",
+      "content": "17. The complete type of OSI model is vital __________",
       "level": "Advanced",
       "quiz": 1
     }
   },
   {
     "model": "Quiz.question",
-    "pk": 18,
+    "pk": 19,
     "fields": {
       "num": 18,
       "total": 18,
