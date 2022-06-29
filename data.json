@@ -873,7 +873,7 @@
     "fields": {
       "content": "VLAN Attack",
       "is_correct": false,
-      "question": 16
+      "question": 17
     }
   },
   {
@@ -882,16 +882,16 @@
     "fields": {
       "content": "VLAN Circumvention",
       "is_correct": true,
-      "question": 16
+      "question": 17
     }
   },
   {
     "model": "Quiz.answer",
     "pk": 63,
     "fields": {
-      "content": "VLAN Compromission Method",
+      "content": "VLAN Compromisation Method",
       "is_correct": false,
-      "question": 16
+      "question": 17
     }
   },
   {
@@ -900,7 +900,7 @@
     "fields": {
       "content": "Data-link Evading",
       "is_correct": false,
-      "question": 16
+      "question": 17
     }
   },
   {
@@ -945,7 +945,7 @@
     "fields": {
       "content": "TCP/IP",
       "is_correct": false,
-      "question": 19
+      "question": 18
     }
   },
   {
@@ -954,7 +954,7 @@
     "fields": {
       "content": "Cloud",
       "is_correct": false,
-      "question": 19
+      "question": 18
     }
   },
   {
@@ -963,7 +963,7 @@
     "fields": {
       "content": "OSI",
       "is_correct": true,
-      "question": 19
+      "question": 18
     }
   },
   {
@@ -972,7 +972,7 @@
     "fields": {
       "content": "OIS",
       "is_correct": false,
-      "question": 19
+      "question": 18
     }
   },
   {
