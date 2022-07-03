@@ -197,7 +197,7 @@
   },
   {
     "model": "Quiz.question",
-    "pk": 17,
+    "pk": 18,
     "fields": {
       "num": 17,
       "total": 18,
@@ -208,7 +208,7 @@
   },
   {
     "model": "Quiz.question",
-    "pk": 18,
+    "pk": 19,
     "fields": {
       "num": 18,
       "total": 18,
@@ -873,7 +873,7 @@
     "fields": {
       "content": "VLAN Attack",
       "is_correct": false,
-      "question": 17
+      "question": 16
     }
   },
   {
@@ -882,16 +882,16 @@
     "fields": {
       "content": "VLAN Circumvention",
       "is_correct": true,
-      "question": 17
+      "question": 16
     }
   },
   {
     "model": "Quiz.answer",
     "pk": 63,
     "fields": {
-      "content": "VLAN Compromisation Method",
+      "content": "VLAN Compromission Method",
       "is_correct": false,
-      "question": 17
+      "question": 16
     }
   },
   {
@@ -900,7 +900,7 @@
     "fields": {
       "content": "Data-link Evading",
       "is_correct": false,
-      "question": 17
+      "question": 16
     }
   },
   {
@@ -945,7 +945,7 @@
     "fields": {
       "content": "TCP/IP",
       "is_correct": false,
-      "question": 18
+      "question": 19
     }
   },
   {
@@ -954,7 +954,7 @@
     "fields": {
       "content": "Cloud",
       "is_correct": false,
-      "question": 18
+      "question": 19
     }
   },
   {
@@ -963,7 +963,7 @@
     "fields": {
       "content": "OSI",
       "is_correct": true,
-      "question": 18
+      "question": 19
     }
   },
   {
@@ -972,7 +972,7 @@
     "fields": {
       "content": "OIS",
       "is_correct": false,
-      "question": 18
+      "question": 19
     }
   },
   {
