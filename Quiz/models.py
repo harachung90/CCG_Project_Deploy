@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from Account import User
 from CCG_Project import settings
 
 User = settings.AUTH_USER_MODEL
