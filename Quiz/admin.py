@@ -12,7 +12,6 @@ class QuestionAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Answer)
-admin.site.register(Mark)
 
 
 class QuizAdmin(admin.ModelAdmin):
@@ -25,4 +24,11 @@ class QuizAdmin(SummernoteModelAdmin):
     search_fields = ('name', 'num_of_questions', 'score_to_pass')
     summernote_fields = ('description',)
 
+
+class MarkAdmin(admin.ModelAdmin):
+    list_display = ('passed')
+    search_fields = ('passed')
+
+
+admin.site.register(Mark, MarkAdmin)
 admin.site.register(Quiz, QuizAdmin)
