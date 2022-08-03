@@ -7,8 +7,8 @@ class AnswerInLine(admin.TabularInline):
     model = Answer
 
 class AnswerAdmin(admin.ModelAdmin):
-    list_display = ('content', 'is_correct', 'question')
-    search_fields = ('content', 'is_correct', 'question')
+    list_display = ('question', 'content', 'question')
+    search_fields = ('question', 'content', 'question')
 
 
 class QuestionAdmin(admin.ModelAdmin):
