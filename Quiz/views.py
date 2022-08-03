@@ -122,7 +122,7 @@ def save_quiz_view(request, myid):
             user_level = "Advanced"
             passed = True
 
-        Mark.objects.create(quiz=quiz, user=user, score=score_percent, user_level=user_level)
+        Mark.objects.create(quiz=quiz, user=user, score=score_percent, user_level=user_level, passed=passed)
 
         return JsonResponse({'passed': passed, 'score_num': score_num, 'score_percent': score_percent,
                              'total': total, 'marks': marks, 'name': name, 'user_level': user_level,

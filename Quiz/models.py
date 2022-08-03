@@ -61,4 +61,4 @@ class Mark(models.Model):
     passed = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'{self.quiz}: taken by {self.user}, Passed?: {self.passed}'
+        return f'{self.quiz} - taken by {self.user}, Passed?: {self.passed}'
