@@ -6,9 +6,17 @@ from .models import Quiz, Question, Answer, Mark
 class AnswerInLine(admin.TabularInline):
     model = Answer
 
+class AnswerAdmin(admin.ModelAdmin):
+    list_display = ('content', 'is_correct', 'question')
+    search_fields = ('content', 'is_correct', 'question')
+
 
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [AnswerInLine]
+
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = ('num', 'content', 'level', 'quiz')
+    search_fields = ('num', 'content', 'level', 'quiz')
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Answer)
@@ -26,8 +34,8 @@ class QuizAdmin(SummernoteModelAdmin):
 
 
 class MarkAdmin(admin.ModelAdmin):
-    list_display = ('quiz', 'user', 'score', 'passed')
-    search_fields = ('quiz', 'user', 'score', 'passed')
+    list_display = ('quiz', 'user', 'score', 'user_level', 'passed')
+    search_fields = ('quiz', 'user', 'score', 'user_level', 'passed')
 
 
 admin.site.register(Mark, MarkAdmin)
