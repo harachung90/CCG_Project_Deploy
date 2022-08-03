@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from Account import User
 from CCG_Project import settings
 
 User = settings.AUTH_USER_MODEL
@@ -58,6 +59,7 @@ class Mark(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     score = models.FloatField(default=0)
     user_level = models.CharField(max_length=25, default="")
+    passed = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(self.quiz)
+        return f'{self.quiz}: taken by {self.user.name}, Passed?: {self.passed}'
