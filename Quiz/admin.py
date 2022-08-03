@@ -31,4 +31,5 @@ class MarkAdmin(admin.ModelAdmin):
     search_fields = ('passed')
 
 
-admin.site.register(Quiz, QuizAdmin, MarkAdmin)
+admin.site.register(Quiz, QuizAdmin)
+admin.site.register(Mark, MarkAdmin)
