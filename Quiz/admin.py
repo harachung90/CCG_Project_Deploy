@@ -21,8 +21,8 @@ class QuizAdmin(admin.ModelAdmin):
 
 
 class QuizAdmin(SummernoteModelAdmin):
-    list_display = ('name', 'num_of_questions', 'score_to_pass')
-    search_fields = ('name', 'num_of_questions', 'score_to_pass')
+    list_display = ('name', 'num_of_questions', 'score_to_pass', 'passed')
+    search_fields = ('name', 'num_of_questions', 'score_to_pass', 'passed')
     summernote_fields = ('description',)
 
 
