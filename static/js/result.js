@@ -133,7 +133,8 @@ const sendData = () => {
                     let randomNum = Math.floor(Math.random() * 9);
                     let ticketNum = ticketList[randomNum];
                     const ticketDiv = document.getElementById('ticket');
-                    ticketDiv.innerHTML += `<h2>You passed! Use this code to unlock the Port Scanner Quiz!</br><span style="background-color: #ffd500">${ticketNum}</span></h2>`
+                    ticketDiv.innerHTML += `<h2>You passed! Use this code to unlock the Port Scanner Quiz!</br>
+<span style="background-color: #ffd500">${ticketNum}</span></h2>`
                     const learningDiv = document.getElementById('start_learning');
                     //learningDiv.style.display = 'none';
                     // add a link to PS Quiz
