@@ -9,7 +9,7 @@ class AnswerInLine(admin.TabularInline):
 
 class AnswerAdmin(admin.ModelAdmin):
     list_display = ('content', 'question', 'is_correct')
-    search_fields = ('content', 'is_correct')
+    search_fields = ('question__content', 'content', 'is_correct')
 
 
 class QuestionAdmin(admin.ModelAdmin):
