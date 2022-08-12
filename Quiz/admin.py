@@ -6,8 +6,9 @@ from .models import Quiz, Question, Answer, Mark
 class AnswerInLine(admin.TabularInline):
     model = Answer
 
+
 class AnswerAdmin(admin.ModelAdmin):
-    list_display = ('question', 'content', 'is_correct')
+    list_display = ('content', 'question', 'is_correct')
     search_fields = ('content', 'is_correct')
 
 
