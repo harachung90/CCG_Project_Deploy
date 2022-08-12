@@ -38,7 +38,7 @@ class QuizAdmin(SummernoteModelAdmin):
 
 class MarkAdmin(admin.ModelAdmin):
     list_display = ('quiz', 'user', 'score', 'user_level', 'passed')
-    search_fields = ('quiz_name', 'user__first_name', 'user__last_name', 'score', 'user_level', 'passed')
+    search_fields = ('quiz__name', 'user__first_name', 'user__last_name', 'score', 'user_level', 'passed')
 
 
 admin.site.register(Mark, MarkAdmin)
