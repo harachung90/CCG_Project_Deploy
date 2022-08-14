@@ -17,8 +17,8 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ('num', 'content', 'level',)
-    search_fields = ('num', 'quiz__name', 'content', 'level',)
+    list_display = ('num', 'quiz__name', 'answer__content', 'content', 'level',)
+    search_fields = ('num', 'quiz__name', 'answer__content', 'content', 'level',)
 
 
 admin.site.register(Question, QuestionAdmin)
