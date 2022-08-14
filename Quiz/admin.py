@@ -14,7 +14,7 @@ class AnswerAdmin(admin.ModelAdmin):
 
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [AnswerInLine]
-    list_display = ('content', 'level', 'quiz__name')
+    list_display = ('content', 'level',)
     search_fields = ('num', 'quiz__name', 'answer__content', 'content', 'level',)
 
 
