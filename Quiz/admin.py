@@ -13,6 +13,7 @@ class AnswerAdmin(admin.ModelAdmin):
 
 
 class QuestionAdmin(admin.ModelAdmin):
+    model = Question
     inlines = [AnswerInLine]
 
 
