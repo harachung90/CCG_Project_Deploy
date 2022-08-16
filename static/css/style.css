@@ -1350,6 +1350,10 @@ hr {
     font-weight: 700;
 }
 
+.d-lg-none {
+    display: none;
+}
+
 .your_level {
     font-size: 30px;
     font-weight: bold;
@@ -1464,6 +1468,10 @@ hr {
     color: #ffffff;
     margin-top: 0;
     margin-bottom: 15px;
+}
+
+.quiz_desc_list {
+    display: flex;
 }
 
 .quiz_desc_box li {
