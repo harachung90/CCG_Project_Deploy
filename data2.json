@@ -1,0 +1,2032 @@
+[
+{
+    "model": "Quiz.quiz",
+    "pk": 1,
+    "fields": {
+        "name": "Level Assessment Quiz",
+        "num_of_questions": 18,
+        "score_to_pass": 67,
+        "description": "<p>If this is your first time, start with Level Assessment Quiz. You can gauge your knowledge on cyber security. You will be asked 18 questions in total.<br>\nDon't forget to check if you have answered all the questions! If you haven't, you won't be able to submit your answers. When you submit, you will get results, which lets you know about your level (refer to the section below).<br>\nAlso, after submitting, you won't be able to change your answers.<br>\nOnce you pass the Level Assessment Quiz, you can move onto Port Scanner Quiz.</p>\n<br>\n\n<h3 style=\"font-weight: 500;\">Level Explained</h3>\n\n      <div class=\"faq\">\n        <ul id=\"faq-list\">\n          <li class=\"faq-list-item\">\n            <h4 class=\"question\">Beginner</h4>\n            <span>+</span>\n            <div class=\"answer_acc\">\n              <p>It is a series of questions aimed at testing users' understanding of the fundamentals of cyber security. It is placed among the first six questions in the test, and it explains general knowledge, great for audiences of all ages, and its basic cyber security questions. Beginner level questions are the only ones focused solely on what cyber security is, whereas intermediate questions and advanced questions are concerned with attacks, threats, and a port scanner. These questions are useful for people who have some experience with cyber security computing but are new to a deep understanding of cyber security.</p>\n            </div>\n          </li>\n          <li class=\"faq-list-item\">\n            <h4 class=\"question\">Intermediate</h4>\n            <span>+</span>\n            <div class=\"answer_acc\">\n              <p>These intermediate questions measure the prerequisite and fundamental knowledge of distributed cyber security computing, including its attacks and threats, as well as the basic understanding of how threats are defined. These questions assess the user's knowledge of different types of threats and attacks at the intermediate level. Cyber security questions at the intermediate level are designed for those who have some familiarity with cyber security attacks but are expanding their knowledge to new areas.</p>\n            </div>\n          </li>\n          <li class=\"faq-list-item\">\n            <h4 class=\"question\">Advanced</h4>\n            <span>+</span>\n            <div class=\"answer_acc\">\n              <p>Questions at this level are designed to assess knowledge of network ports, how a service or related service works, as well as how to use the port scanner provided to complete specific tasks. In advanced questions, the user is assessed on complex concepts and is provided with multiple network ports used to provide situations that require the user to weigh trade-offs and think critically.</p>\n            </div>\n          </li>\n        </ul>\n      </div>\n\n\n<script>\n$('.faq-list-item').click(function() {\n    var $answer = $(this).find('.answer_acc');\n    if ($answer.hasClass('open')) {\n      $answer.removeClass('open');\n      $answer.slideUp();\n      \n      $(this).find('span').text('+');\n    } else {\n      $answer.addClass('open');\n      $answer.slideDown();\n      \n      $(this).find('span').text('-');\n    }\n  })\n</script>"
+    }
+},
+{
+    "model": "Quiz.quiz",
+    "pk": 2,
+    "fields": {
+        "name": "Port Scanner Quiz",
+        "num_of_questions": 10,
+        "score_to_pass": 67,
+        "description": "<p>This port scanner quiz is designed to test your knowledge on port scanning.\nPort scanning is basically checking to see if a port is open for communication.\nIf it's open, then it can be taken advantage of to find vulnerabilities in the system.</p><br>\n<p>Download the port scanner below: (Last updated: 24/06/2022)<br>\n(Hover over the download button for help if you can't download.)</p>\n<button type=\"button\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"If you're using IE or Edge and the browser says 'FILE is not commonly downloaded and could harm your computer', turn off SmartScreen setting and try again.\nYou may have to click on the download button again and choose 'Keep' to download the file.\nHow do I turn SmartScreen off?\n1. Select Settings and more > Settings > Privacy, search, and services.\n2. Under Services, turn Microsoft Defender SmartScreen off.\n(You can turn it back on after downloading if you wish.)\n\">\n\n<a href=\"https://dl.dropboxusercontent.com/s/qnj548rsoik1mzw/newPort_Scanner_Project.py?dl=0\" download=\"\">Download</a></button>\n<p>The demo video below will help you get through the installation steps and teachyou how to use it, and why it's important!</p>\n<figure>\n    <div class=\"videoWrapper\">\n        <iframe src=\"https://www.youtube.com/embed/sdpxddDzXfE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe>\n    </div>\n</figure>\n\n<p>Be sure to have the port scanner ready before the Port Scanner Quiz, as you will be required to run it for the quiz. Don't worry, the quiz will pop up in a new window, and you can still refer to the demo video at the same time!</p>\n<p>To see how the quiz will look like, click <span class=\"sample\"><a href=\"https://ccg-project.herokuapp.com/quiz_list/sample\" }\"=\"\">here</a></span>. It'll be very similar to Level Assessment Quiz.</p>"
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 1,
+    "fields": {
+        "num": 1,
+        "total": 18,
+        "content": "1. Define Cybersecurity",
+        "level": "Beginner",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 2,
+    "fields": {
+        "num": 2,
+        "total": 18,
+        "content": "2. Who is the founding father of computer security?",
+        "level": "Beginner",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 3,
+    "fields": {
+        "num": 3,
+        "total": 18,
+        "content": "3. Which of the subsequent may be a sort of cyber security?",
+        "level": "Beginner",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 4,
+    "fields": {
+        "num": 4,
+        "total": 18,
+        "content": "4. Which of the subsequent is an objective of network security?",
+        "level": "Beginner",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 5,
+    "fields": {
+        "num": 5,
+        "total": 18,
+        "content": "5. Which of the subsequent could be a component of cyber security?",
+        "level": "Beginner",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 6,
+    "fields": {
+        "num": 6,
+        "total": 18,
+        "content": "6. Which of the subsequent could be a kind of cyber attack?",
+        "level": "Beginner",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 7,
+    "fields": {
+        "num": 7,
+        "total": 18,
+        "content": "7. Which of the subsequent is the hacking approach where cyber-criminals design fake websites or pages for tricking or gaining additional traffic?",
+        "level": "Beginner",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 8,
+    "fields": {
+        "num": 8,
+        "total": 18,
+        "content": "8. A cyber-criminal or penetration tester uses the extra data that stores certain special instructions within the memory for activities to interrupt the system during which of the subsequent attack?",
+        "level": "Intermediate",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 9,
+    "fields": {
+        "num": 9,
+        "total": 18,
+        "content": "9. Which of the subsequent is defined as an effort to harm, damage or cause threat to a system or network?",
+        "level": "Intermediate",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 10,
+    "fields": {
+        "num": 10,
+        "total": 18,
+        "content": "10. Which of the subsequent is an online scam done by cyber-criminals where the user is convinced digitally to supply counselling?",
+        "level": "Intermediate",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 11,
+    "fields": {
+        "num": 11,
+        "total": 18,
+        "content": "11. Which of the subsequent ethical hacking technique is employed for determining which package (OS) is running on a far-off computer?",
+        "level": "Intermediate",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 12,
+    "fields": {
+        "num": 12,
+        "total": 18,
+        "content": "12. Which of the subsequent is NOT a vulnerability of the network layer?",
+        "level": "Intermediate",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 13,
+    "fields": {
+        "num": 13,
+        "total": 18,
+        "content": "13. Which of the subsequent is an example of physical layer vulnerability?",
+        "level": "Advanced",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 14,
+    "fields": {
+        "num": 14,
+        "total": 18,
+        "content": "14. Which of the subsequent is an example of data-link layer vulnerability?",
+        "level": "Advanced",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 15,
+    "fields": {
+        "num": 15,
+        "total": 18,
+        "content": "15. Which of the subsequent is an example of network layer vulnerability?",
+        "level": "Advanced",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 16,
+    "fields": {
+        "num": 16,
+        "total": 18,
+        "content": "16. ___________ is data-link layer vulnerability where stations are forced to create direct communication with another station by evading logical controls.",
+        "level": "Advanced",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 18,
+    "fields": {
+        "num": 17,
+        "total": 18,
+        "content": "17. The complete type of OSI model is vital __________.",
+        "level": "Advanced",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 19,
+    "fields": {
+        "num": 18,
+        "total": 18,
+        "content": "18. The __________ model is 7-layer architecture where each layer has some specific functionality to perform.",
+        "level": "Advanced",
+        "quiz": 1
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 23,
+    "fields": {
+        "num": 1,
+        "total": 10,
+        "content": "1. How many ports are there?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 24,
+    "fields": {
+        "num": 2,
+        "total": 10,
+        "content": "2. What is the status of port 80?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 25,
+    "fields": {
+        "num": 3,
+        "total": 10,
+        "content": "3. Which service runs on port 21?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 26,
+    "fields": {
+        "num": 4,
+        "total": 10,
+        "content": "4. Which port is secure?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 27,
+    "fields": {
+        "num": 5,
+        "total": 10,
+        "content": "5. Which ports should be open?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 28,
+    "fields": {
+        "num": 6,
+        "total": 10,
+        "content": "6. Which port should be closed?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 29,
+    "fields": {
+        "num": 7,
+        "total": 10,
+        "content": "7. What is the port number for Localhost?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 30,
+    "fields": {
+        "num": 8,
+        "total": 10,
+        "content": "8. Which ports are used for authentication and file sharing?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 31,
+    "fields": {
+        "num": 9,
+        "total": 10,
+        "content": "9. Which port is used for web server?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.question",
+    "pk": 32,
+    "fields": {
+        "num": 10,
+        "total": 10,
+        "content": "10. Which is the first port to be opened?",
+        "level": "Advanced",
+        "quiz": 2
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 1,
+    "fields": {
+        "content": "Cyber Security requires security against cyber-terrorists",
+        "is_correct": false,
+        "question": 1
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 2,
+    "fields": {
+        "content": "Cyber Security supports security against malware",
+        "is_correct": false,
+        "question": 1
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 3,
+    "fields": {
+        "content": "Cyber Security protects a system from cyberattacks",
+        "is_correct": false,
+        "question": 1
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 4,
+    "fields": {
+        "content": "All of the above",
+        "is_correct": true,
+        "question": 1
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 5,
+    "fields": {
+        "content": "August Kerckhoffs",
+        "is_correct": true,
+        "question": 2
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 6,
+    "fields": {
+        "content": "Bob Thomas",
+        "is_correct": false,
+        "question": 2
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 7,
+    "fields": {
+        "content": "Robert Menzies",
+        "is_correct": false,
+        "question": 2
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 8,
+    "fields": {
+        "content": "Charles Manson",
+        "is_correct": false,
+        "question": 2
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 9,
+    "fields": {
+        "content": "Cloud Security",
+        "is_correct": false,
+        "question": 3
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 10,
+    "fields": {
+        "content": "Network Security",
+        "is_correct": false,
+        "question": 3
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 11,
+    "fields": {
+        "content": "Application Security",
+        "is_correct": true,
+        "question": 3
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 12,
+    "fields": {
+        "content": "All of the above",
+        "is_correct": false,
+        "question": 3
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 13,
+    "fields": {
+        "content": "Confidentiality",
+        "is_correct": false,
+        "question": 4
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 14,
+    "fields": {
+        "content": "Integrity",
+        "is_correct": false,
+        "question": 4
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 15,
+    "fields": {
+        "content": "Availability",
+        "is_correct": false,
+        "question": 4
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 16,
+    "fields": {
+        "content": "All of the above",
+        "is_correct": true,
+        "question": 4
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 17,
+    "fields": {
+        "content": "Internet Of Things",
+        "is_correct": true,
+        "question": 5
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 18,
+    "fields": {
+        "content": "AI",
+        "is_correct": false,
+        "question": 5
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 19,
+    "fields": {
+        "content": "Database",
+        "is_correct": false,
+        "question": 5
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 20,
+    "fields": {
+        "content": "Cyber attacks",
+        "is_correct": false,
+        "question": 5
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 21,
+    "fields": {
+        "content": "Phishing",
+        "is_correct": false,
+        "question": 6
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 22,
+    "fields": {
+        "content": "SQL Injections",
+        "is_correct": false,
+        "question": 6
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 23,
+    "fields": {
+        "content": "Password Attack",
+        "is_correct": false,
+        "question": 6
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 24,
+    "fields": {
+        "content": "All of the above",
+        "is_correct": true,
+        "question": 6
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 25,
+    "fields": {
+        "content": "Pharming",
+        "is_correct": true,
+        "question": 7
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 26,
+    "fields": {
+        "content": "Website-Duplication",
+        "is_correct": false,
+        "question": 7
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 27,
+    "fields": {
+        "content": "Mimicking",
+        "is_correct": false,
+        "question": 7
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 28,
+    "fields": {
+        "content": "Spamming",
+        "is_correct": false,
+        "question": 7
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 29,
+    "fields": {
+        "content": "Clickjacking",
+        "is_correct": false,
+        "question": 8
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 30,
+    "fields": {
+        "content": "Buffer-overflow",
+        "is_correct": true,
+        "question": 8
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 31,
+    "fields": {
+        "content": "Phishing",
+        "is_correct": false,
+        "question": 8
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 32,
+    "fields": {
+        "content": "MITM",
+        "is_correct": false,
+        "question": 8
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 33,
+    "fields": {
+        "content": "Digital crime",
+        "is_correct": false,
+        "question": 9
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 34,
+    "fields": {
+        "content": "Threats",
+        "is_correct": false,
+        "question": 9
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 35,
+    "fields": {
+        "content": "System hijacking",
+        "is_correct": false,
+        "question": 9
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 36,
+    "fields": {
+        "content": "Cyberattack",
+        "is_correct": true,
+        "question": 9
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 37,
+    "fields": {
+        "content": "MITM attack",
+        "is_correct": false,
+        "question": 10
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 38,
+    "fields": {
+        "content": "Phishing attack",
+        "is_correct": true,
+        "question": 10
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 39,
+    "fields": {
+        "content": "Website attack",
+        "is_correct": false,
+        "question": 10
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 40,
+    "fields": {
+        "content": "DoS attack",
+        "is_correct": false,
+        "question": 10
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 41,
+    "fields": {
+        "content": "Software System Fingerprinting",
+        "is_correct": true,
+        "question": 11
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 42,
+    "fields": {
+        "content": "Software Package Penetration Testing",
+        "is_correct": false,
+        "question": 11
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 43,
+    "fields": {
+        "content": "Digital Printing",
+        "is_correct": false,
+        "question": 11
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 44,
+    "fields": {
+        "content": "Machine Printing",
+        "is_correct": false,
+        "question": 11
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 45,
+    "fields": {
+        "content": "Route Spoofing",
+        "is_correct": false,
+        "question": 12
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 46,
+    "fields": {
+        "content": "Identity & Resource ID Vulnerability",
+        "is_correct": false,
+        "question": 12
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 47,
+    "fields": {
+        "content": "IP Address Spoofing",
+        "is_correct": false,
+        "question": 12
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 48,
+    "fields": {
+        "content": "Weak or Non-existent Authentication",
+        "is_correct": true,
+        "question": 12
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 49,
+    "fields": {
+        "content": "MAC Address Spoofing",
+        "is_correct": false,
+        "question": 13
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 50,
+    "fields": {
+        "content": "Physical Theft of Information",
+        "is_correct": true,
+        "question": 13
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 51,
+    "fields": {
+        "content": "Route spoofing",
+        "is_correct": false,
+        "question": 13
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 52,
+    "fields": {
+        "content": "Weak or Non-existent Authentication",
+        "is_correct": false,
+        "question": 13
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 53,
+    "fields": {
+        "content": "MAC Address Spoofing",
+        "is_correct": true,
+        "question": 14
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 54,
+    "fields": {
+        "content": "Physical Theft of Information",
+        "is_correct": false,
+        "question": 14
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 55,
+    "fields": {
+        "content": "Route Spoofing",
+        "is_correct": false,
+        "question": 14
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 56,
+    "fields": {
+        "content": "Weak or Non-existent Authentication",
+        "is_correct": false,
+        "question": 14
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 57,
+    "fields": {
+        "content": "MAC Address Spoofing",
+        "is_correct": false,
+        "question": 15
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 58,
+    "fields": {
+        "content": "Physical Theft of Information",
+        "is_correct": false,
+        "question": 15
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 59,
+    "fields": {
+        "content": "Route Spoofing",
+        "is_correct": true,
+        "question": 15
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 60,
+    "fields": {
+        "content": "Weak or Non-existent Authentication",
+        "is_correct": false,
+        "question": 15
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 61,
+    "fields": {
+        "content": "VLAN Attack",
+        "is_correct": false,
+        "question": 16
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 62,
+    "fields": {
+        "content": "VLAN Circumvention",
+        "is_correct": true,
+        "question": 16
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 63,
+    "fields": {
+        "content": "VLAN Compromission Method",
+        "is_correct": false,
+        "question": 16
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 64,
+    "fields": {
+        "content": "Data-link Evading",
+        "is_correct": false,
+        "question": 16
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 69,
+    "fields": {
+        "content": "Open Systems Interconnection",
+        "is_correct": true,
+        "question": 18
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 70,
+    "fields": {
+        "content": "Open Software Interconnection",
+        "is_correct": false,
+        "question": 18
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 71,
+    "fields": {
+        "content": "Open Systems Internet",
+        "is_correct": false,
+        "question": 18
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 72,
+    "fields": {
+        "content": "Open Software Internet",
+        "is_correct": false,
+        "question": 18
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 73,
+    "fields": {
+        "content": "TCP/IP",
+        "is_correct": false,
+        "question": 19
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 74,
+    "fields": {
+        "content": "Cloud",
+        "is_correct": false,
+        "question": 19
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 75,
+    "fields": {
+        "content": "OSI",
+        "is_correct": true,
+        "question": 19
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 76,
+    "fields": {
+        "content": "OIS",
+        "is_correct": false,
+        "question": 19
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 89,
+    "fields": {
+        "content": "65545",
+        "is_correct": false,
+        "question": 23
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 90,
+    "fields": {
+        "content": "65533",
+        "is_correct": false,
+        "question": 23
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 91,
+    "fields": {
+        "content": "65535",
+        "is_correct": true,
+        "question": 23
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 92,
+    "fields": {
+        "content": "65935",
+        "is_correct": false,
+        "question": 23
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 93,
+    "fields": {
+        "content": "Closed",
+        "is_correct": false,
+        "question": 24
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 94,
+    "fields": {
+        "content": "Open",
+        "is_correct": true,
+        "question": 24
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 95,
+    "fields": {
+        "content": "Filtered",
+        "is_correct": false,
+        "question": 24
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 96,
+    "fields": {
+        "content": "Unfiltered",
+        "is_correct": false,
+        "question": 24
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 97,
+    "fields": {
+        "content": "SSH",
+        "is_correct": false,
+        "question": 25
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 98,
+    "fields": {
+        "content": "FTP (File Transfer Protocol)",
+        "is_correct": true,
+        "question": 25
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 99,
+    "fields": {
+        "content": "Talent Protocol",
+        "is_correct": false,
+        "question": 25
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 100,
+    "fields": {
+        "content": "None of them",
+        "is_correct": false,
+        "question": 25
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 101,
+    "fields": {
+        "content": "21",
+        "is_correct": false,
+        "question": 26
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 102,
+    "fields": {
+        "content": "22",
+        "is_correct": true,
+        "question": 26
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 103,
+    "fields": {
+        "content": "24",
+        "is_correct": false,
+        "question": 26
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 104,
+    "fields": {
+        "content": "66",
+        "is_correct": false,
+        "question": 26
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 105,
+    "fields": {
+        "content": "135",
+        "is_correct": false,
+        "question": 27
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 106,
+    "fields": {
+        "content": "67",
+        "is_correct": false,
+        "question": 27
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 107,
+    "fields": {
+        "content": "17",
+        "is_correct": false,
+        "question": 27
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 108,
+    "fields": {
+        "content": "67 & 17",
+        "is_correct": true,
+        "question": 27
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 109,
+    "fields": {
+        "content": "445",
+        "is_correct": true,
+        "question": 28
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 110,
+    "fields": {
+        "content": "24",
+        "is_correct": false,
+        "question": 28
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 111,
+    "fields": {
+        "content": "23",
+        "is_correct": false,
+        "question": 28
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 112,
+    "fields": {
+        "content": "None of them",
+        "is_correct": false,
+        "question": 28
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 113,
+    "fields": {
+        "content": "443 port",
+        "is_correct": false,
+        "question": 29
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 114,
+    "fields": {
+        "content": "135 port",
+        "is_correct": false,
+        "question": 29
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 115,
+    "fields": {
+        "content": "80 port",
+        "is_correct": true,
+        "question": 29
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 116,
+    "fields": {
+        "content": "None of them",
+        "is_correct": false,
+        "question": 29
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 117,
+    "fields": {
+        "content": "139 & 445",
+        "is_correct": true,
+        "question": 30
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 118,
+    "fields": {
+        "content": "8888 & 8080",
+        "is_correct": false,
+        "question": 30
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 119,
+    "fields": {
+        "content": "135 & 443",
+        "is_correct": false,
+        "question": 30
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 120,
+    "fields": {
+        "content": "All the above",
+        "is_correct": false,
+        "question": 30
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 121,
+    "fields": {
+        "content": "21",
+        "is_correct": false,
+        "question": 31
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 122,
+    "fields": {
+        "content": "5011",
+        "is_correct": false,
+        "question": 31
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 123,
+    "fields": {
+        "content": "4448",
+        "is_correct": false,
+        "question": 31
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 124,
+    "fields": {
+        "content": "8080",
+        "is_correct": true,
+        "question": 31
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 125,
+    "fields": {
+        "content": "22 & 234",
+        "is_correct": true,
+        "question": 32
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 126,
+    "fields": {
+        "content": "67 & 17",
+        "is_correct": false,
+        "question": 32
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 127,
+    "fields": {
+        "content": "56 & 135",
+        "is_correct": false,
+        "question": 32
+    }
+},
+{
+    "model": "Quiz.answer",
+    "pk": 128,
+    "fields": {
+        "content": "None of them",
+        "is_correct": false,
+        "question": 32
+    }
+},
+{
+    "model": "Quiz.mark",
+    "pk": 1,
+    "fields": {
+        "quiz": 1,
+        "user": 1,
+        "score": 33.0,
+        "user_level": "Intermediate",
+        "passed": false
+    }
+},
+{
+    "model": "Quiz.mark",
+    "pk": 2,
+    "fields": {
+        "quiz": 2,
+        "user": 1,
+        "score": 20.0,
+        "user_level": "Beginner",
+        "passed": false
+    }
+},
+{
+    "model": "Quiz.mark",
+    "pk": 3,
+    "fields": {
+        "quiz": 1,
+        "user": 4,
+        "score": 22.0,
+        "user_level": "Beginner",
+        "passed": false
+    }
+},
+{
+    "model": "Quiz.mark",
+    "pk": 4,
+    "fields": {
+        "quiz": 1,
+        "user": 4,
+        "score": 94.0,
+        "user_level": "Advanced",
+        "passed": false
+    }
+},
+{
+    "model": "Quiz.mark",
+    "pk": 5,
+    "fields": {
+        "quiz": 2,
+        "user": 4,
+        "score": 30.0,
+        "user_level": "Beginner",
+        "passed": false
+    }
+},
+{
+    "model": "Quiz.mark",
+    "pk": 6,
+    "fields": {
+        "quiz": 2,
+        "user": 4,
+        "score": 90.0,
+        "user_level": "Advanced",
+        "passed": false
+    }
+},
+{
+    "model": "Quiz.mark",
+    "pk": 7,
+    "fields": {
+        "quiz": 2,
+        "user": 4,
+        "score": 90.0,
+        "user_level": "Advanced",
+        "passed": false
+    }
+},
+{
+    "model": "Course.post",
+    "pk": 2,
+    "fields": {
+        "title": "For Beginners",
+        "slug": "for-beginners",
+        "content": "<p>Are you familiar with the basics of cyber security? These questions will help test your understanding. Placed among the first six questions on the test, it explains general knowledge, which is great for audiences of all ages, and its essential cybersecurity questions. The beginner level questions are the only questions that focus only on what cybersecurity is, while the intermediate and advanced questions are about attacks, threats, and port scanners. These questions are useful for people who are familiar with cyber security computing, but are new to a more in-depth understanding of cyber security.</p><p><br></p><p><b>Cyber Security : Essential principles to secure your organisation [electronic resource] / Calder, Alan.</b></p><p>Published in: 2020,Victoria University Library Catalog</p><p>By: Calder, Alan</p><p><br></p><p><b>Cyber security : an introduction for non-technical managers / Jeremy Swinfen Green, Mosoco Ltd, London, UK.</b></p><p>Published in: 2015,Victoria University Library Catalog</p><p>By: Green, Jeremy Swinfen</p><p><br></p><p><b>Cyber Security</b></p><p>Published in: 2019,eBook Collection (EBSCOhost)</p><p>By: Padallan, Jocelyn O.</p><p><br></p>",
+        "category": "Beginner",
+        "created_at": "2022-08-17"
+    }
+},
+{
+    "model": "Course.post",
+    "pk": 3,
+    "fields": {
+        "title": "For Intermediate",
+        "slug": "for-intemediate",
+        "content": "<p>These intermediate questions assess the level of knowledge prerequisite and fundamental to cyber security computing, including information about attacks and threats, and a basic understanding of how threats are defined. These questions assess the user's knowledge of cyber security threats and attacks at an intermediate level.Cyber security questions at this level are designed for those who have some familiarity with cyber security attacks but are expanding their knowledge to new areas.</p><p><br></p><p><b>Cyber-security : protecting critical infrastructures from cyber attack and cyber warfare / edited by Thomas A. Johnson, Webster University, St. Louis, Missouri, USA.</b></p><p>Published in:</p><p>2015, Victoria University Library Catalog</p><p><br></p><p><b>Cyber attacks and security breaches : coping with external threats.</b></p><p>Published in: 2014,Victoria University Library Catalog</p><div><br></div>",
+        "category": "Intermediate",
+        "created_at": "2022-08-17"
+    }
+},
+{
+    "model": "Course.post",
+    "pk": 4,
+    "fields": {
+        "title": "For Advanced",
+        "slug": "for-advanced",
+        "content": "<p>At this level of questioning, we're checking to see if you know how to use the ports on your computer and how to use the services that are related to them. In advanced questions, you're assessed on complex concepts and given multiple network ports to provide real-world scenarios that require you to think critically.</p><p><b><br></b></p><p><b>The cyber security network guide / Fiedelholtz.</b></p><p>Published in: 2021,Victoria University Library Catalog</p><p>By: Fiedelholtz, Glenn</p><p><br></p><p><b>Cyber security and network security / edited by Sabyasachi Pramanik, Debabrata Samanta, M. Vinay, Abhijit Guha.</b></p><p>Published in: 2022,Victoria University Library Catalog</p><div><br></div>",
+        "category": "Advanced",
+        "created_at": "2022-08-17"
+    }
+},
+{
+    "model": "Account.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$sK0oj5YVsyTjuXeR6RuOcp$Dndn0UwGxOIfRkk5VoJjhjjUwtGQjVWETd5VhtmE7JM=",
+        "username": "admin1",
+        "email": "harachung90@gmail.com",
+        "first_name": "Hara",
+        "last_name": "Chung",
+        "date_joined": "2022-07-03T10:12:37.709Z",
+        "last_login": "2022-08-17T01:59:11.275Z",
+        "is_active": true,
+        "is_admin": true,
+        "is_staff": true,
+        "is_superuser": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "Account.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$v46qbiOd9NJGWphaWXWyDU$TsIGyFjUIBiR0m15MyepWPJWR3njqriNamt3z1aUZ8E=",
+        "username": "charlottebronte",
+        "email": "Charlotte@bronte.co.uk",
+        "first_name": "Charlotte",
+        "last_name": "Bronte",
+        "date_joined": "2022-07-11T09:59:43.523Z",
+        "last_login": "2022-07-11T10:15:30.966Z",
+        "is_active": true,
+        "is_admin": false,
+        "is_staff": false,
+        "is_superuser": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add quiz",
+        "content_type": 1,
+        "codename": "add_quiz"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change quiz",
+        "content_type": 1,
+        "codename": "change_quiz"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete quiz",
+        "content_type": 1,
+        "codename": "delete_quiz"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view quiz",
+        "content_type": 1,
+        "codename": "view_quiz"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add question",
+        "content_type": 2,
+        "codename": "add_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change question",
+        "content_type": 2,
+        "codename": "change_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete question",
+        "content_type": 2,
+        "codename": "delete_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view question",
+        "content_type": 2,
+        "codename": "view_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add answer",
+        "content_type": 3,
+        "codename": "add_answer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change answer",
+        "content_type": 3,
+        "codename": "change_answer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete answer",
+        "content_type": 3,
+        "codename": "delete_answer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view answer",
+        "content_type": 3,
+        "codename": "view_answer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add mark",
+        "content_type": 4,
+        "codename": "add_mark"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change mark",
+        "content_type": 4,
+        "codename": "change_mark"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete mark",
+        "content_type": 4,
+        "codename": "delete_mark"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view mark",
+        "content_type": 4,
+        "codename": "view_mark"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add post",
+        "content_type": 5,
+        "codename": "add_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change post",
+        "content_type": 5,
+        "codename": "change_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete post",
+        "content_type": 5,
+        "codename": "delete_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view post",
+        "content_type": 5,
+        "codename": "view_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 6,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 6,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 6,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 6,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 7,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 7,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 7,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 7,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 8,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 8,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 8,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 8,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 9,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 9,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 9,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 9,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 10,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 10,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 10,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 10,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 11,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 11,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 11,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 11,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add attachment",
+        "content_type": 12,
+        "codename": "add_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change attachment",
+        "content_type": 12,
+        "codename": "change_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete attachment",
+        "content_type": 12,
+        "codename": "delete_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view attachment",
+        "content_type": 12,
+        "codename": "view_attachment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "Quiz",
+        "model": "quiz"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "Quiz",
+        "model": "question"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "Quiz",
+        "model": "answer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "Quiz",
+        "model": "mark"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "Course",
+        "model": "post"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "Account",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "django_summernote",
+        "model": "attachment"
+    }
+},
+{
+    "model": "django_summernote.attachment",
+    "pk": 1,
+    "fields": {
+        "name": "20190928_000647.jpg",
+        "file": "django-summernote/2022-07-10/3ef1b106-ad73-44c8-85e2-70080c643880.jpg",
+        "uploaded": "2022-07-10T10:50:48.529Z"
+    }
+},
+{
+    "model": "django_summernote.attachment",
+    "pk": 2,
+    "fields": {
+        "name": "jeremy-bezanger-dSvv95-6FpA-unsplash.jpg",
+        "file": "django-summernote/2022-07-10/4db38c07-6e61-49b2-95cf-a83577b7b97c.jpg",
+        "uploaded": "2022-07-10T10:53:32.305Z"
+    }
+}
+]
